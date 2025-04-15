@@ -1,0 +1,162 @@
+{
+    "questions": [
+      {
+        "section": 1,
+        "questions": [
+          {
+            "id": 1,
+            "questionText": "Vi se întâmplă des să nu reuşiţi să acordaţi atenţie detaliilor sau faceţi greşeli din neatenţie la locul de muncă sau în timpul altor activităţi? Cum se prezenta această situaţie în copilărie?",
+            "summaryText": "Adesea nu reușește să fie suficient de atent la detalii, sau face greșeli din neatenție în activităţile şcolare, la locul de muncă sau în timpul altor activități",
+            "questionNumber": "A1",
+            "adulthoodOptions": ["Face greșeli din neatenție",
+                              "Trebuie sa lucreaze încet pentru a evita greșelile",
+                              "Nu citește instrucțiunile cu atenție",
+                              "Are dificultăți în a desfăşura activități detaliate",
+                              "Necesită prea mult timp pentru detalii",
+                              "Se încurcă ușor în detalii",
+                              "Lucrează prea repede și din acest motiv face greșeli"
+                              ],
+            "childhoodOptions": ["Greșeli din neatenție în activitățile școlare",
+                              "Greșeli făcute pentru că nu citește întrebările cu atenţie",
+                              "Lasă întrebări fără răspuns pentru că nu le citeşte cu atenţie",
+                              "Nu răspunde la întrebările unui test aflate pe verso",
+                              "Ceilalți comentează cu privire la munca neglijentă",
+                              "Nu verifică răspunsurile în tema pentru acasă",
+                              "Necesită prea mult timp pentru a efectua sarcini detaliate"]
+          },
+          {
+              "id": 2,
+              "questionText": "Vi se întâmplă des să nu reuşiţi să acordaţi atenţie susţinută sarcinilor? Cum se prezenta această situaţie în copilărie?",
+              "summaryText": "A2. Adesea întâmpină dificultăți în menținerea atenției asupra sarcinilor sau jocurilor",
+              "questionNumber": "A2",
+              "adulthoodOptions": ["Nu poate menține pentru mult timp atenția asupra sarcinilor",
+                              "Este repede distras de propriile gânduri sau asocieri",
+                              "Îi este dificil să urmărească un film până la sfârșit, sau să citească o carte",
+                              "Se plictisește repede de lucruri",
+                              "Pune întrebări asupra unor subiecte care au fost deja discutate"],
+              "childhoodOptions": ["Dificultate în a îşi menţine atenţia asupra activității școlare",
+                  "Dificultate în a îşi menţine atenţia asupra jocului",
+                  "Atenţia îi este distrasă uşor",
+                  "Dificultăţi de concentrare",
+                  "Are nevoie de pattern-uri fixe in viata de zi cu zi pentru a nu fi distras",
+                  "Se plictisește repede de activități"]
+            },
+            {
+              "id": 3,
+              "questionText": "Vi se întâmplă des să vi se pară că nu ascultați atunci când cineva vi se adresează direct? Cum se prezenta această situaţie în copilărie?",
+              "summaryText": "Adesea pare să nu asculte când i se vorbește direct",
+              "questionNumber": "A3",
+              "adulthoodOptions": [
+                "Visător sau preocupat",
+                "Dificultate în a se concentra asupra unei conversații",
+                "Ulterior, nu mai știe despre ce a fost conversația",
+                "Schimbare frecventă a subiectului conversației",
+                "Alte persoane spun că esti cu gândul în altă parte"],
+              "childhoodOptions": [
+                "Nu știe ce au spus părinții/profesorii",
+                "Visător sau preocupat",
+                "Ascultă doar în timpul contactului vizual sau când este ridicat tonul",
+                "Trebuie să fie adesea readresat",
+                "Întrebările trebuie să fie repetate"]
+            }
+        ]
+      },
+      {
+        "section": 2,
+        "questions": [
+          {
+            "id": 1,
+            "questionText": "Vi se întâmplă des să nu reuşiţi să acordaţi atenţie detaliilor sau faceţi greşeli din neatenţie la locul de muncă sau în timpul altor activităţi? Cum se prezenta această situaţie în copilărie?",
+            "summaryText": "Adesea nu reușește să fie suficient de atent la detalii, sau face greșeli din neatenție în activităţile şcolare, la locul de muncă sau în timpul altor activități",
+            "questionNumber": "H1",
+            "adulthoodOptions": ["Face greșeli din neatenție",
+                              "Trebuie sa lucreaze încet pentru a evita greșelile",
+                              "Nu citește instrucțiunile cu atenție",
+                              "Are dificultăți în a desfăşura activități detaliate",
+                              "Necesită prea mult timp pentru detalii",
+                              "Se încurcă ușor în detalii",
+                              "Lucrează prea repede și din acest motiv face greșeli"
+                              ],
+            "childhoodOptions": ["Greșeli din neatenție în activitățile școlare",
+                              "Greșeli făcute pentru că nu citește întrebările cu atenţie",
+                              "Lasă întrebări fără răspuns pentru că nu le citeşte cu atenţie",
+                              "Nu răspunde la întrebările unui test aflate pe verso",
+                              "Ceilalți comentează cu privire la munca neglijentă",
+                              "Nu verifică răspunsurile în tema pentru acasă",
+                              "Necesită prea mult timp pentru a efectua sarcini detaliate"]
+          },
+          {
+              "id": 2,
+              "questionText": "Vi se întâmplă des să nu reuşiţi să acordaţi atenţie susţinută sarcinilor? Cum se prezenta această situaţie în copilărie?",
+              "summaryText": "A2. Adesea întâmpină dificultăți în menținerea atenției asupra sarcinilor sau jocurilor",
+              "questionNumber": "H2",
+              "adulthoodOptions": ["Nu poate menține pentru mult timp atenția asupra sarcinilor",
+                              "Este repede distras de propriile gânduri sau asocieri",
+                              "Îi este dificil să urmărească un film până la sfârșit, sau să citească o carte",
+                              "Se plictisește repede de lucruri",
+                              "Pune întrebări asupra unor subiecte care au fost deja discutate"],
+              "childhoodOptions": ["Dificultate în a îşi menţine atenţia asupra activității școlare",
+                  "Dificultate în a îşi menţine atenţia asupra jocului",
+                  "Atenţia îi este distrasă uşor",
+                  "Dificultăţi de concentrare",
+                  "Are nevoie de pattern-uri fixe in viata de zi cu zi pentru a nu fi distras",
+                  "Se plictisește repede de activități"]
+            }
+        ]
+      }, 
+      {
+        "section": 3,
+        "questions": [
+          {
+            "id": 1,
+            "questionText": "Muncă/educație",
+            "summaryText": "Muncă/educație",
+            "questionNumber": "",
+            "adulthoodOptions": [
+              "Nu ați finalizat studiile/formarea necesară locului de muncă",
+              "Munciți sub nivelul de educație",
+              "Vă plictisiți repede de un loc de muncă",
+              "Tipar de slujbe numeroase, de scurtă durată",
+              "Nu reușiți să avansați"
+            ],
+            "childhoodOptions": ["Nivel educațional scăzut față de cel așteptat pe baza IQ-ului",
+            "Finalizarea studiilor a durat mult mai mult decât în mod obişnuit"
+            ]
+          },
+          {
+            "id": 2,
+            "questionText": "Relație și/sau familie",
+            "summaryText": "Relație și/sau familie",
+            "questionNumber": "",
+            "adulthoodOptions": [
+              "Nu ați finalizat studiile/formarea necesară locului de muncă",
+              "Munciți sub nivelul de educație",
+              "Vă plictisiți repede de un loc de muncă",
+              "Tipar de slujbe numeroase, de scurtă durată",
+              "Nu reușiți să avansați"
+            ],
+            "childhoodOptions": ["Nivel educațional scăzut față de cel așteptat pe baza IQ-ului",
+            "Finalizarea studiilor a durat mult mai mult decât în mod obişnuit"
+            ]
+          },
+          {
+            "id": 3,
+            "questionText": "Altele",
+            "summaryText": "Relație și/sau familie",
+            "questionNumber": "",
+            "adulthoodOptions": [
+              "Nu ați finalizat studiile/formarea necesară locului de muncă",
+              "Munciți sub nivelul de educație",
+              "Vă plictisiți repede de un loc de muncă",
+              "Tipar de slujbe numeroase, de scurtă durată",
+              "Nu reușiți să avansați"
+            ],
+            "childhoodOptions": ["Nivel educațional scăzut față de cel așteptat pe baza IQ-ului",
+            "Finalizarea studiilor a durat mult mai mult decât în mod obişnuit"
+            ]
+          }
+          ]
+        }
+      ]
+  }
+  
