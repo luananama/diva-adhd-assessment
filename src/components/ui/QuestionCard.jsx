@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import styled from "styled-components";
 import StyledCheckbox from "../ui/StyledCheckbox";
+import { useAssessment } from "../../contexts/AssessmentContext";
+import useToggleArrayValue from "../../hooks/useToggleArrayValue";
 
 const QuestionBox = styled.div`
   background-color: #ffffff;
@@ -47,15 +49,43 @@ const ColumnHeader = styled.h3`
 
 const AnswerOption = styled.label`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 10px;
   color: #555;
 
-  input {
-    margin-right: 8px;
+  textarea {
+    width: 100%;
+    min-height: 60px;
+    margin-top: 8px;
   }
 `;
 
+const OtherExample = styled.div`
+  margin-top: 5px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #555;
+
+  label {
+    margin-bottom: 5px;
+    font-size: 1rem;
+  }
+
+  textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    resize: vertical;
+    min-height: 50px;
+    max-height: 200px;
+    color: #555;
+  }
+`;
 const Row = styled.div`
   display: flex;
   flex-direction: row;
@@ -67,12 +97,123 @@ const Row = styled.div`
   }
 `;
 
-const QuestionCard = ({
-  question,
-  sectionNumber,
-  currentAnswers,
-  handleAnswer,
-}) => {
+const SymptomLabel = styled.div`
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #555;
+`;
+// const SymptomCheckBox = styled.div`
+//   font-size: 1.2rem;
+//   font-weight: bold;
+//   margin-top: 15px;
+//   display: flex;
+//   align-items: center;
+//   color: #555;
+
+//   input {
+//     margin-right: 8px;
+//   }
+// `;
+
+// Wrapper for the entire symptom present section
+const SymptomCheckBoxWrapper = styled.div`
+  border: 1px solid #ccc;
+  padding: 10px 10px 5px 10px;
+  margin-top: auto; /* Push to the bottom */
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  position: relative;
+`;
+
+const QuestionCard = ({ question, sectionNumber }) => {
+  const { answers, updateAnswers } = useAssessment();
+  const sectionKey = `section${sectionNumber}`;
+
+  const toggleArrayValue = useToggleArrayValue();
+
+  const handleCheckbox = (questionId, selectedIndex, context = {}) => {
+    const rawValue = answers[sectionKey]?.[questionId]?.value;
+    // toggle checkbox - add new value if it doesn't exist, remove it if it does
+    const newValue = toggleArrayValue(rawValue, selectedIndex);
+
+    updateAnswers(sectionKey, questionId, newValue, {
+      ...context,
+      symptomPresent: newValue.length > 0,
+      other: answers[sectionKey]?.[questionId]?.other || "",
+    });
+  };
+
+  const handleTextInput = (questionId, value, context = {}) => {
+    const prevValue = answers[sectionKey]?.[questionId]?.value || [];
+
+    updateAnswers(sectionKey, questionId, prevValue, {
+      ...context,
+      other: value,
+      symptomPresent: prevValue.length > 0,
+    });
+  };
+
+  // builds the answers for either the adulthood or childhood part of a question
+  const renderGroup = (label, options, groupKey) => {
+    const questionId = `${groupKey}-${question.id}`;
+    const current = answers[sectionKey]?.[questionId] || {};
+
+    return (
+      <Column>
+        <ColumnHeader>{label}</ColumnHeader>
+
+        {options.map((option, index) => {
+          const checked =
+            Array.isArray(current.value) && current.value.includes(index);
+
+          return (
+            <AnswerOption key={`${questionId}-${index}`}>
+              <StyledCheckbox
+                name={`${questionId}-option${index}`}
+                checked={checked}
+                onChange={() =>
+                  handleCheckbox(questionId, index, {
+                    questionText: question.questionText,
+                    summaryText: question.summaryText,
+                    optionText: option,
+                  })
+                }
+              />
+              {option}
+            </AnswerOption>
+          );
+        })}
+
+        {/* Text input for "Other" */}
+        <OtherExample>
+          <label>Altele:</label>
+          <textarea
+            placeholder="Exemplu personal..."
+            value={current.other || ""}
+            onChange={(e) =>
+              handleTextInput(questionId, e.target.value, {
+                questionText: question.questionText,
+                summaryText: question.summaryText,
+              })
+            }
+          />
+        </OtherExample>
+
+        {/* Symptom present checkbox (read-only for now) */}
+        <SymptomCheckBoxWrapper>
+          <SymptomLabel>
+            <StyledCheckbox
+              checked={current.symptomPresent || false}
+              disabled
+              label="Simptom prezent"
+              name={`${questionId}-symptom-present`}
+            />
+          </SymptomLabel>
+        </SymptomCheckBoxWrapper>
+      </Column>
+    );
+  };
+
   return (
     <QuestionBox>
       <div style={{ display: "flex", alignItems: "center" }}>
@@ -81,53 +222,16 @@ const QuestionCard = ({
       </div>
 
       <Row>
-        <Column>
-          <ColumnHeader>Exemple pentru perioada maturităţii:</ColumnHeader>
-          {question.adulthoodOptions.map((option, index) => {
-            const id = `adult-${question.id}`;
-            const checked = currentAnswers[id]?.value === index;
-            return (
-              <AnswerOption key={`${id}-${index}`}>
-                <StyledCheckbox
-                  name={`section${sectionNumber}-adulthood-${question.id}-example${index}`}
-                  onChange={() =>
-                    handleAnswer(id, index, {
-                      questionText: question.questionText,
-                      summaryText: question.summaryText,
-                      optionText: option,
-                    })
-                  }
-                  checked={checked}
-                />
-                {option}
-              </AnswerOption>
-            );
-          })}
-        </Column>
-
-        <Column>
-          <ColumnHeader>Exemple pentru perioada copilăriei:</ColumnHeader>
-          {question.childhoodOptions.map((option, index) => {
-            const id = `child-${question.id}`;
-            const checked = currentAnswers[id]?.value === index;
-            return (
-              <AnswerOption key={`${id}-${index}`}>
-                <StyledCheckbox
-                  name={`section${sectionNumber}-childhood-${question.id}-example${index}`}
-                  onChange={() =>
-                    handleAnswer(id, index, {
-                      questionText: question.questionText,
-                      summaryText: question.summaryText,
-                      optionText: option,
-                    })
-                  }
-                  checked={checked}
-                />
-                {option}
-              </AnswerOption>
-            );
-          })}
-        </Column>
+        {renderGroup(
+          "Exemple pentru perioada maturităţii:",
+          question.adulthoodOptions,
+          "adult"
+        )}
+        {renderGroup(
+          "Exemple pentru perioada copilăriei:",
+          question.childhoodOptions,
+          "child"
+        )}
       </Row>
     </QuestionBox>
   );

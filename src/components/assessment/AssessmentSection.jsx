@@ -15,19 +15,34 @@ const SectionContainer = styled.div`
 const AssessmentSection = () => {
   const { sectionNumber } = useParams();
   const navigate = useNavigate();
-  const { answers, updateAnswers } = useAssessment();
+  const { answers } = useAssessment();
 
   const currentSection = questionsData.sections.find(
     (section) => section.sectionNumber === parseInt(sectionNumber)
   );
 
-  const handleAnswer = (questionId, value, context = {}) => {
-    updateAnswers(`section${sectionNumber}`, questionId, value, {
-      questionText: context.questionText,
-      summaryText: context.summaryText,
-      optionText: context.optionText || "",
-    });
-  };
+  //   const handleAnswer = (questionId, selectedIndex, context = {}) => {
+  //     const sectionKey = `section${sectionNumber}`;
+  //     const prev = answers[sectionKey]?.[questionId]?.value || [];
+
+  //     const newValue = prev.includes(selectedIndex)
+  //       ? prev.filter((i) => i !== selectedIndex)
+  //       : [...prev, selectedIndex];
+
+  //     updateAnswers(sectionKey, questionId, newValue, {
+  //       ...context,
+  //       symptomPresent: newValue.length > 0,
+  //     });
+  //   };
+
+  //   const handleOtherExample = (questionId, value, context = {}) => {
+  //   const sectionKey = `section${sectionNumber}`;
+
+  //   updateAnswers(sectionKey, questionId, value, {
+  //     ...context,
+  //     other: value
+  //   });
+  // };
 
   const handleNext = () => {
     const nextSection = parseInt(sectionNumber) + 1;
@@ -52,13 +67,7 @@ const AssessmentSection = () => {
       <h2>Section {sectionNumber}</h2>
 
       {currentSection.questions.map((q) => (
-        <QuestionCard
-          key={q.id}
-          question={q}
-          sectionNumber={sectionNumber}
-          currentAnswers={currentAnswers}
-          handleAnswer={handleAnswer}
-        />
+        <QuestionCard key={q.id} question={q} sectionNumber={sectionNumber} />
       ))}
 
       <button onClick={handleNext} disabled={totalAnswered < totalExpected}>

@@ -1,16 +1,16 @@
 /* eslint-disable react/prop-types */
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const CheckboxLabel = styled.label`
   display: inline-flex;
   align-items: center;
   font-size: 1rem;
   margin-left: 10px;
-  color: ${({ disabled }) => (disabled ? '#ccc' : '#000')};
+  color: ${({ disabled }) => (disabled ? "#ccc" : "#000")};
 `;
 
-const Checkbox = styled.input.attrs({ type: 'checkbox' })`
+const Checkbox = styled.input.attrs({ type: "checkbox" })`
   width: 20px;
   height: 20px;
   cursor: pointer;
@@ -21,7 +21,6 @@ const Checkbox = styled.input.attrs({ type: 'checkbox' })`
   transition: all 0.2s ease;
   position: relative;
   background-color: white;
-  
 
   &:checked {
     background-color: #3db2c4;
@@ -33,36 +32,36 @@ const Checkbox = styled.input.attrs({ type: 'checkbox' })`
   }
 
   &:checked::after {
-    content: '✔';
+    content: "✔";
     font-size: 12px;
     color: white;
     position: absolute;
     top: 1px;
     left: 3px;
   }
-    
 `;
 
-const CheckboxCell = styled.td`
-  text-align: center;
-  padding-left: 5px; /* Reduce gap between text and checkboxes */
-  padding-right: 20px; 
-  gap: 5px; /* Space between Da and Nu options */
-`;
-
-const StyledCheckbox = ({ label, checked, onChange, disabled, readOnly, name }) => {
+const StyledCheckbox = ({
+  label,
+  checked,
+  onChange,
+  disabled,
+  readOnly,
+  name,
+  id,
+}) => {
   return (
-    <CheckboxCell>
-      <CheckboxLabel disabled={disabled}>
-        <Checkbox 
+    <CheckboxLabel htmlFor={id} disabled={disabled}>
+      <Checkbox
+        id={id}
         name={name}
-        checked={checked} 
-        onChange={onChange} 
+        checked={checked}
+        onChange={onChange}
         disabled={disabled}
-        readOnly={readOnly}/>
-        {label}
-      </CheckboxLabel>
-    </CheckboxCell>
+        readOnly={readOnly}
+      />
+      {label}
+    </CheckboxLabel>
   );
 };
 
