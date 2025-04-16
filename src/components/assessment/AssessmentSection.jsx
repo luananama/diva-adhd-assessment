@@ -1,6 +1,16 @@
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from "react-router-dom";
 import questionsData from "../../assets/questions.json";
-import { useAssessment } from '../../contexts/AssessmentContext';
+import { useAssessment } from "../../contexts/AssessmentContext";
+import styled from "styled-components";
+import QuestionCard from "../ui/QuestionCard";
+
+const SectionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+  padding: 20px;
+`;
 
 const AssessmentSection = () => {
   const { sectionNumber } = useParams();
@@ -8,26 +18,26 @@ const AssessmentSection = () => {
   const { answers, updateAnswers } = useAssessment();
 
   const currentSection = questionsData.sections.find(
-    section => section.sectionNumber === parseInt(sectionNumber)
+    (section) => section.sectionNumber === parseInt(sectionNumber)
   );
 
   const handleAnswer = (questionId, value, context = {}) => {
     updateAnswers(`section${sectionNumber}`, questionId, value, {
       questionText: context.questionText,
       summaryText: context.summaryText,
-      optionText: context.optionText || ''
+      optionText: context.optionText || "",
     });
   };
 
   const handleNext = () => {
     const nextSection = parseInt(sectionNumber) + 1;
     const hasMoreSections = questionsData.sections.some(
-      section => section.sectionNumber === nextSection
+      (section) => section.sectionNumber === nextSection
     );
     if (hasMoreSections) {
       navigate(`/section/${nextSection}`);
     } else {
-      navigate('/summary'); // Navigate to summary when done
+      navigate("/summary"); // Navigate to summary when done
     }
   };
 
@@ -38,76 +48,23 @@ const AssessmentSection = () => {
   const totalExpected = currentSection.questions.length * 2; // adult + child
 
   return (
-    <div>
+    <SectionContainer>
       <h2>Section {sectionNumber}</h2>
 
-      {currentSection.questions.map(q => (
-        <div key={q.id}>
-          <h3>{q.questionText}</h3>
-
-          {/* Adult options */}
-          <div>
-            <h4>Adulthood:</h4>
-            {q.adulthoodOptions.map((option, index) => {
-              const id = `adult-${q.id}`;
-              const checked = currentAnswers[id]?.value === index;
-              return (
-                <div key={`${id}-${index}`}>
-                  <input
-                    type="radio"
-                    id={`${id}-${index}`}
-                    name={id}
-                    onChange={() =>
-                      handleAnswer(id, index, {
-                        questionText: q.questionText,
-                        summaryText: q.summaryText,
-                        optionText: option
-                      })
-                    }
-                    checked={checked}
-                  />
-                  <label htmlFor={`${id}-${index}`}>{option}</label>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Childhood options */}
-          <div>
-            <h4>Childhood:</h4>
-            {q.childhoodOptions.map((option, index) => {
-              const id = `child-${q.id}`;
-              const checked = currentAnswers[id]?.value === index;
-              return (
-                <div key={`${id}-${index}`}>
-                  <input
-                    type="radio"
-                    id={`${id}-${index}`}
-                    name={id}
-                    onChange={() =>
-                      handleAnswer(id, index, {
-                        questionText: q.questionText,
-                        summaryText: q.summaryText,
-                        optionText: option
-                      })
-                    }
-                    checked={checked}
-                  />
-                  <label htmlFor={`${id}-${index}`}>{option}</label>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+      {currentSection.questions.map((q) => (
+        <QuestionCard
+          key={q.id}
+          question={q}
+          sectionNumber={sectionNumber}
+          currentAnswers={currentAnswers}
+          handleAnswer={handleAnswer}
+        />
       ))}
 
-      <button
-        onClick={handleNext}
-        disabled={totalAnswered < totalExpected}
-      >
+      <button onClick={handleNext} disabled={totalAnswered < totalExpected}>
         Next
       </button>
-    </div>
+    </SectionContainer>
   );
 };
 
