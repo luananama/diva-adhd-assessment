@@ -1,8 +1,8 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import questionsData from "../../assets/questions.json";
-import { useAssessment } from "../../contexts/AssessmentContext";
 import styled from "styled-components";
 import QuestionCard from "../ui/QuestionCard";
+import StyledButton, { ButtonContainer } from "../ui/StyledButton";
 
 const SectionContainer = styled.div`
   display: flex;
@@ -12,67 +12,62 @@ const SectionContainer = styled.div`
   padding: 20px;
 `;
 
+const ProgressBarContainer = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: #eee;
+  z-index: 999;
+`;
+
+const Progress = styled.div`
+  height: 100%;
+  width: ${({ percent }) => percent}%;
+  background-color: #3db2c4;
+  transition: width 0.3s ease;
+`;
+
 const AssessmentSection = () => {
   const { sectionNumber } = useParams();
-  const navigate = useNavigate();
-  const { answers } = useAssessment();
 
   const currentSection = questionsData.sections.find(
     (section) => section.sectionNumber === parseInt(sectionNumber)
   );
 
-  //   const handleAnswer = (questionId, selectedIndex, context = {}) => {
-  //     const sectionKey = `section${sectionNumber}`;
-  //     const prev = answers[sectionKey]?.[questionId]?.value || [];
+  // calculate progress in assessment for the progress bar
+  const totalSections = questionsData.sections.length;
+  const currentIndex = parseInt(sectionNumber);
+  const progressPercent = (currentIndex / totalSections) * 100;
 
-  //     const newValue = prev.includes(selectedIndex)
-  //       ? prev.filter((i) => i !== selectedIndex)
-  //       : [...prev, selectedIndex];
+  // determine which page the back and next buttons go to based on the current page
+  const nextSection = parseInt(sectionNumber) + 1;
+  const hasMoreSections = nextSection <= totalSections;
 
-  //     updateAnswers(sectionKey, questionId, newValue, {
-  //       ...context,
-  //       symptomPresent: newValue.length > 0,
-  //     });
-  //   };
+  const nextPath = hasMoreSections ? `/section/${nextSection}` : "/summary";
 
-  //   const handleOtherExample = (questionId, value, context = {}) => {
-  //   const sectionKey = `section${sectionNumber}`;
-
-  //   updateAnswers(sectionKey, questionId, value, {
-  //     ...context,
-  //     other: value
-  //   });
-  // };
-
-  const handleNext = () => {
-    const nextSection = parseInt(sectionNumber) + 1;
-    const hasMoreSections = questionsData.sections.some(
-      (section) => section.sectionNumber === nextSection
-    );
-    if (hasMoreSections) {
-      navigate(`/section/${nextSection}`);
-    } else {
-      navigate("/summary"); // Navigate to summary when done
-    }
-  };
-
+  const prevSection = parseInt(sectionNumber) - 1;
+  // #TODO go to instructions instead of start?
+  const backPath = prevSection >= 1 ? `/section/${prevSection}` : "/";
   if (!currentSection) return <div>Section not found</div>;
-
-  const currentAnswers = answers[`section${sectionNumber}`] || {};
-  const totalAnswered = Object.keys(currentAnswers).length;
-  const totalExpected = currentSection.questions.length * 2; // adult + child
 
   return (
     <SectionContainer>
+      <ProgressBarContainer>
+        <Progress percent={progressPercent} />
+      </ProgressBarContainer>
+
       <h2>Section {sectionNumber}</h2>
 
       {currentSection.questions.map((q) => (
         <QuestionCard key={q.id} question={q} sectionNumber={sectionNumber} />
       ))}
 
-      <button onClick={handleNext} disabled={totalAnswered < totalExpected}>
-        Next
-      </button>
+      <ButtonContainer>
+        <StyledButton to={backPath}>Back</StyledButton>
+        <StyledButton to={nextPath}>Next</StyledButton>
+      </ButtonContainer>
     </SectionContainer>
   );
 };

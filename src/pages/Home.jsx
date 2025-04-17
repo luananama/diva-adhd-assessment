@@ -1,6 +1,5 @@
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
-import StyledButton from '../components/ui/StyledButton';
+import styled from "styled-components";
+import StyledButton, { ButtonContainer } from "../components/ui/StyledButton";
 
 const HomePageContainer = styled.div`
   display: flex;
@@ -32,20 +31,30 @@ function Home() {
     <>
       <HomePageContainer>
         <Instructions>
-        Testul ADHD DIVA (Interviul Diagnostic pentru ADHD la Adulți) este un instrument standardizat conceput pentru profesioniștii din domeniul sănătății, precum psihiatri, psihologi, și alți specialiști în sănătate mintală, pentru a evalua simptomele ADHD la adulți conform criteriilor DSM V. 
-        Aplicația permite administrarea digitală a testului DIVA, oferind o modalitate eficientă și sigură de a evalua simptomele de inatenție și hiperactivitate/impulsivitate atât în prezent, cât și din copilărie, cu scorare automată și generare de rapoarte detaliate, păstrând în același timp confidențialitatea și securitatea datelor pacientului.
+          Testul ADHD DIVA (Interviul Diagnostic pentru ADHD la Adulți) este un
+          instrument standardizat conceput pentru profesioniștii din domeniul
+          sănătății, precum psihiatri, psihologi, și alți specialiști în
+          sănătate mintală, pentru a evalua simptomele ADHD la adulți conform
+          criteriilor DSM V. Aplicația permite administrarea digitală a testului
+          DIVA, oferind o modalitate eficientă și sigură de a evalua simptomele
+          de inatenție și hiperactivitate/impulsivitate atât în prezent, cât și
+          din copilărie, cu scorare automată și generare de rapoarte detaliate,
+          păstrând în același timp confidențialitatea și securitatea datelor
+          pacientului.
         </Instructions>
         <Citation>
-          <p><strong>Reference:</strong> Kooij JJS, Francken MH. Diagnostic Interview for ADHD in adults (DIVA-5). DIVA Foundation; 2018.</p>
+          <p>
+            <strong>Reference:</strong> Kooij JJS, Francken MH. Diagnostic
+            Interview for ADHD in adults (DIVA-5). DIVA Foundation; 2018.
+          </p>
         </Citation>
-        <NavLink to="/part1"><StyledButton>Start</StyledButton></NavLink>
-        {/* <Link href="/section1" passHref>
-          <StartButton>Start the Assessment</StartButton>
-        </Link> */}
+        <ButtonContainer>
+          <StyledButton to="/instructions">Instructions</StyledButton>
+          <StyledButton to="/section/1">Start Assessment</StyledButton>
+        </ButtonContainer>
       </HomePageContainer>
     </>
   );
 }
 
 export default Home;
-

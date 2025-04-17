@@ -100,22 +100,9 @@ const Row = styled.div`
 const SymptomLabel = styled.div`
   font-size: 1.2rem;
   font-weight: 600;
-  color: #555;
 `;
-// const SymptomCheckBox = styled.div`
-//   font-size: 1.2rem;
-//   font-weight: bold;
-//   margin-top: 15px;
-//   display: flex;
-//   align-items: center;
-//   color: #555;
 
-//   input {
-//     margin-right: 8px;
-//   }
-// `;
-
-// Wrapper for the entire symptom present section
+// wrapper for the entire symptom present section
 const SymptomCheckBoxWrapper = styled.div`
   border: 1px solid #ccc;
   padding: 10px 10px 5px 10px;
