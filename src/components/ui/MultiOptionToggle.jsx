@@ -6,11 +6,16 @@ import StyledCheckbox from "./StyledCheckbox";
 
 const OptionGroup = styled.div`
   display: flex;
+  flex-direction: ${({ inline }) => (inline ? "row" : "column")};
   gap: 20px;
-  align-items: center;
+  align-items: flex-start;
 `;
 
-const MultiOptionToggle = ({ options = [], onSelect = () => {} }) => {
+const MultiOptionToggle = ({
+  options = [],
+  onSelect = () => {},
+  inline = true,
+}) => {
   const [selectedOption, setSelectedOption] = useState(null);
 
   const handleChange = (option) => {
@@ -20,7 +25,7 @@ const MultiOptionToggle = ({ options = [], onSelect = () => {} }) => {
   };
 
   return (
-    <OptionGroup>
+    <OptionGroup inline={inline}>
       {options.map((option, index) => (
         <StyledCheckbox
           key={index}

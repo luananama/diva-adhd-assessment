@@ -2,42 +2,40 @@
 
 import styled from "styled-components";
 import StyledCheckbox from "./StyledCheckbox";
+import { useState } from "react";
 
-const CheckboxLabel = styled.label`
-  display: inline-flex;
-  align-items: center;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #333;
-  gap: 6px;
-  cursor: pointer;
-`;
+// const CheckboxLabel = styled.label`
+//   display: inline-flex;
+//   align-items: center;
+//   font-size: 1.1rem;
+//   font-weight: 600;
+//   color: #333;
+//   gap: 6px;
+//   cursor: pointer;
+// `;
 
 const ToggleWrapper = styled.div`
   display: flex;
   gap: 20px;
+  align-items: center;
 `;
 
-const SymptomToggle = ({ value, onChange, disabled = false }) => {
+const SymptomToggle = () => {
+  const [selected, setSelected] = useState(null); // 'yes' | 'no' | null
+
   return (
     <ToggleWrapper>
-      <CheckboxLabel>
-        <StyledCheckbox
-          checked={value === "yes"}
-          onChange={() => onChange(value === "yes" ? null : "yes")}
-          disabled={disabled}
-        />
-        Da
-      </CheckboxLabel>
+      <StyledCheckbox
+        checked={selected === "yes"}
+        label={"Da"}
+        onChange={() => setSelected(selected === "yes" ? null : "yes")}
+      />
 
-      <CheckboxLabel>
-        <StyledCheckbox
-          checked={value === "no"}
-          onChange={() => onChange(value === "no" ? null : "no")}
-          disabled={disabled}
-        />
-        Nu
-      </CheckboxLabel>
+      <StyledCheckbox
+        checked={selected === "no"}
+        onChange={() => setSelected(selected === "no" ? null : "no")}
+        label={"Nu"}
+      />
     </ToggleWrapper>
   );
 };
