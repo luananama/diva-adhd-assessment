@@ -1,25 +1,25 @@
-import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 const ButtonContainer = styled.div`
   display: flex;
-  justify-content: center; 
-  gap: 10px; 
-  margin-top: 20px; 
-  max-width: 400px; 
-  margin-left: auto; 
-  margin-right: auto; 
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 20px;
 `;
 
 const StyledButton = styled(NavLink)`
-text-decoration: none;
-  background-color: #3297a6; /* Drop shadow color */
+  text-decoration: none;
+  background-color: var(--color-primary-alt); /* Drop shadow color */
   border: solid transparent;
   border-radius: 16px;
   border-width: 0 0 4px;
   box-sizing: border-box;
-  color: #FFFFFF !important;
+  color: var(--color-white) !important;
   display: inline-block;
   font-family: din-round, sans-serif;
   font-size: 14px;
@@ -37,7 +37,7 @@ text-decoration: none;
 
   &:after {
     background-clip: padding-box;
-    background-color: #3db2c4; 
+    background-color: var(--color-primary);
     border: solid transparent;
     border-radius: 16px;
     border-width: 0 0 4px;

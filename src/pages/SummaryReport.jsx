@@ -10,20 +10,20 @@ const Title = styled.h1`
   text-align: center;
   font-size: 2.2rem;
   margin-bottom: 1.5rem;
-  color: #2b2b2b;
+  color: var(--color-gray-800);
 `;
 
 const TableHeader = styled.th`
   padding: 14px;
-  background-color: #3db2c4;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   text-align: left;
   font-size: 1rem;
   font-weight: 500;
 `;
 
 const TotalRow = styled.tr`
-  background-color: #d4daf3;
+  background-color: var(--color-primary-light);
   font-weight: bold;
 `;
 
@@ -31,14 +31,14 @@ const TotalSymptomsCell = styled.td`
   padding: 12px;
   text-align: left;
   font-size: 1rem;
-  color: #333;
+  color: var(--color-gray-700);
 `;
 
 const SummaryContainer = styled.div`
   padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
-  background-color: #f9f9f9;
+  background-color: var(--color-gray-100);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
 `;
@@ -47,7 +47,7 @@ const StyledTable = styled.table`
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
-  background-color: #fff;
+  background-color: var(--color-white);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
@@ -55,36 +55,38 @@ const StyledTable = styled.table`
 
 const TableHeaderCell = styled.td`
   padding: 14px;
-  background-color: #3db2c4; /* Light blue background */
-  color: white;
+  background-color: var(--color-primary); /* Light blue background */
+  color: var(--color-white);
   text-align: center;
   font-size: 1rem;
   font-weight: bold;
   vertical-align: middle;
   width: 180px; /* Width of the first column */
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid var(--color-gray-200);
 `;
 
 const TableCell = styled.td`
   padding: 12px;
   text-align: left;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid var(--color-gray-200);
   font-size: 0.95rem;
-  color: #4a4a4a;
+  color: var(--color-gray-700);
 `;
 
 const SimpleCell = styled.td`
   padding: 12px;
   text-align: left;
   font-size: 0.95rem;
-  color: #4a4a4a;
-  background-color: white; /* Ensure white background for section 1 */
+  color: var(--color-gray-700);
+  background-color: var(
+    --color-white
+  ); /* Ensure white background for section 1 */
   border-bottom: none; /* Remove the line between rows */
 `;
 
 const TableRow = styled.tr`
   &:nth-child(even) {
-    background-color: #fafafa;
+    background-color: var(--color-gray-100);
   }
 `;
 

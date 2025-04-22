@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
-
 const FooterContainer = styled.footer`
   padding: 1rem 2rem;
   background: #fefefe;
@@ -12,13 +11,13 @@ const FooterContainer = styled.footer`
 `;
 
 const FooterLink = styled(NavLink)`
-  color: #1c688a;
+  color: var(--color-accent-blue);
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.2s;
 
   &:hover {
-    color: #f56b6b;
+    color: var(--color-accent-pink);
     text-decoration: underline;
   }
 `;
@@ -26,9 +25,7 @@ const FooterLink = styled(NavLink)`
 function Footer() {
   return (
     <FooterContainer>
-        <FooterLink>
-            hi.
-        </FooterLink>
+      <FooterLink>hi.</FooterLink>
     </FooterContainer>
   );
 }

@@ -18,14 +18,14 @@ const ProgressBarContainer = styled.div`
   left: 0;
   width: 100%;
   height: 6px;
-  background-color: #eee;
+  background-color: var(--color-gray-300);
   z-index: 999;
 `;
 
 const Progress = styled.div`
   height: 100%;
   width: ${({ percent }) => percent}%;
-  background-color: #3db2c4;
+  background-color: var(--color-primary);
   transition: width 0.3s ease;
 `;
 

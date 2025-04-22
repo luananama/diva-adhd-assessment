@@ -5,7 +5,7 @@ import { useAssessment } from "../../contexts/AssessmentContext";
 import useToggleArrayValue from "../../hooks/useToggleArrayValue";
 
 const QuestionBox = styled.div`
-  background-color: #ffffff;
+  background-color: var(--color-white);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -15,8 +15,8 @@ const QuestionBox = styled.div`
 `;
 
 const QuestionNumberBox = styled.div`
-  background-color: #5bc0be;
-  color: #ffffff;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   font-size: 1.2rem;
   font-weight: bold;
   padding: 20px;
@@ -30,7 +30,7 @@ const QuestionNumberBox = styled.div`
 
 const QuestionText = styled.p`
   font-size: 1.3rem;
-  color: #444;
+  color: var(--color-gray-900);
   margin-bottom: 15px;
 `;
 
@@ -42,7 +42,7 @@ const Column = styled.div`
 
 const ColumnHeader = styled.h3`
   font-size: 1rem;
-  color: #555;
+  color: var(--color-gray-900);
   margin-top: 30px;
   margin-bottom: 20px;
 `;
@@ -51,7 +51,7 @@ const AnswerOption = styled.label`
   display: flex;
   align-items: flex-start;
   margin-bottom: 10px;
-  color: #555;
+  color: var(--color-gray-800);
 
   textarea {
     width: 100%;
@@ -66,7 +66,7 @@ const OtherExample = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  color: #555;
+  color: var(--color-gray-900);
 
   label {
     margin-bottom: 5px;
@@ -76,14 +76,19 @@ const OtherExample = styled.div`
   textarea {
     width: 100%;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-gray-300);
     border-radius: 4px;
     font-size: 1rem;
     box-sizing: border-box;
     resize: vertical;
     min-height: 50px;
     max-height: 200px;
-    color: #555;
+    color: var(--color-gray-800);
+
+    &::placeholder {
+      color: var(--color-gray-600); /* or another subtle gray */
+      opacity: 1; /* Make sure it's fully visible */
+    }
   }
 `;
 const Row = styled.div`
@@ -104,11 +109,11 @@ const SymptomLabel = styled.div`
 
 // wrapper for the entire symptom present section
 const SymptomCheckBoxWrapper = styled.div`
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-gray-200);
   padding: 10px 10px 5px 10px;
   margin-top: auto; /* Push to the bottom */
   border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: var(--color-gray-100);
   position: relative;
 `;
 
@@ -171,7 +176,7 @@ const QuestionCard = ({ question, sectionNumber }) => {
           );
         })}
 
-        {/* Text input for "Other" */}
+        {/* text input for "other examples" */}
         <OtherExample>
           <label>Altele:</label>
           <textarea
@@ -186,7 +191,7 @@ const QuestionCard = ({ question, sectionNumber }) => {
           />
         </OtherExample>
 
-        {/* Symptom present checkbox (read-only for now) */}
+        {/* symptom present checkbox (read-only for now) */}
         <SymptomCheckBoxWrapper>
           <SymptomLabel>
             <StyledCheckbox

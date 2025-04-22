@@ -7,7 +7,8 @@ const CheckboxLabel = styled.label`
   align-items: center;
   font-size: 1rem;
   margin-left: 10px;
-  color: ${({ disabled }) => (disabled ? "#ccc" : "#000")};
+  color: ${({ disabled }) =>
+    disabled ? "var(--color-gray-600)" : "var(--color-gray-700)"};
 `;
 
 const Checkbox = styled.input.attrs({ type: "checkbox" })`
@@ -15,26 +16,26 @@ const Checkbox = styled.input.attrs({ type: "checkbox" })`
   height: 20px;
   cursor: pointer;
   border-radius: 50%;
-  border: 2px solid #ccc;
+  border: 2px solid var(--color-gray-300);
   appearance: none;
   outline: none;
   transition: all 0.2s ease;
   position: relative;
-  background-color: white;
+  background-color: var(--color-white);
 
   &:checked {
-    background-color: #3db2c4;
-    border-color: #3db2c4;
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
   }
 
   &:hover {
-    border-color: #0074cc;
+    border-color: var(--color-primary);
   }
 
   &:checked::after {
     content: "✔";
     font-size: 12px;
-    color: white;
+    color: var(--color-white);
     position: absolute;
     top: 1px;
     left: 3px;

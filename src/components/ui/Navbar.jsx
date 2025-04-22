@@ -1,9 +1,9 @@
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
-import StyledButton from './StyledButton';
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
+import StyledButton from "./StyledButton";
 
 const HeaderContainer = styled.header`
-  background-color: #ffffff;
+  background-color: var(--color-white);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -12,9 +12,9 @@ const HeaderContainer = styled.header`
 `;
 
 const Title = styled.h1`
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-size: 1.5rem;
-  color: #1c688a;
+  color: var(--color-gray-900);
   margin: 0;
   font-weight: 700;
 `;
@@ -40,12 +40,12 @@ const NavItem = styled.li`
 
 const RegularLink = styled(NavLink)`
   text-decoration: none;
-  background-color: white;
+  background-color: var(--color-white);
   border: solid transparent;
   border-radius: 16px;
   border-width: 0 0 4px;
   box-sizing: border-box;
-  color: #3297a6;
+  color: var(--color-primary-alt);
   display: inline-block;
   font-family: din-round, sans-serif;
   font-size: 14px;
@@ -62,13 +62,12 @@ const RegularLink = styled(NavLink)`
   transition: filter 0.2s;
 
   &:hover {
-    color: #3db2c4;
+    color: var(--color-primary);
   }
 
   &.active {
-    font-weight: 600;
-    border: solid;
-    border-color: #efefef;
+    border-bottom: 2px solid var(--color-gray-200);
+    color: var(--color-primary-alt);
   }
 `;
 
@@ -82,9 +81,10 @@ const LanguageButton = styled.button`
   font-size: 24px;
   line-height: 1;
 
-  &:hover {
-    background-color: #f0f0f0;
-  }
+  /* add back in when there is support for multiple languages*/
+  /* &:hover {
+    background-color: var(--color-gray-100);
+  } */
 `;
 
 function Navbar() {
@@ -94,7 +94,6 @@ function Navbar() {
       <Nav>
         <NavList>
           <NavItem>
-            {/* <ButtonLink to="/">Assessment</ButtonLink> */}
             <StyledButton to="/">Assessment</StyledButton>
           </NavItem>
           <NavItem>
@@ -102,7 +101,7 @@ function Navbar() {
           </NavItem>
           <NavItem>
             <LanguageButton aria-label="Change language">
-              🇷🇴 {/* Static flag icon */}
+              🇷🇴 {/* static for now */}
             </LanguageButton>
           </NavItem>
         </NavList>
