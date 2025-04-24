@@ -105,11 +105,14 @@ function Navbar() {
         <NavList>
           <NavItem>
             <StyledButton as="button" onClick={handleStart}>
-              Assessment
+              Începe evaluarea
             </StyledButton>
           </NavItem>
           <NavItem>
-            <RegularLink to="/about">About</RegularLink>
+            <RegularLink to="/about">Despre</RegularLink>
+          </NavItem>
+          <NavItem>
+            <RegularLink to="/instructions">Instrucțiuni</RegularLink>
           </NavItem>
           <NavItem>
             <LanguageButton aria-label="Change language">
