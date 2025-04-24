@@ -65,8 +65,8 @@ const AssessmentSection = () => {
       ))}
 
       <ButtonContainer>
-        <StyledButton to={backPath}>Back</StyledButton>
-        <StyledButton to={nextPath}>Next</StyledButton>
+        <StyledButton to={backPath}>Înapoi</StyledButton>
+        <StyledButton to={nextPath}>Înainte</StyledButton>
       </ButtonContainer>
     </SectionContainer>
   );

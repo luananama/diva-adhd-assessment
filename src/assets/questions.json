@@ -1,162 +1,519 @@
 {
-    "sections": [
-      {
-        "sectionNumber": 1,
-        "questions": [
-          {
-            "id": 1,
-            "questionText": "Vi se întâmplă des să nu reuşiţi să acordaţi atenţie detaliilor sau faceţi greşeli din neatenţie la locul de muncă sau în timpul altor activităţi? Cum se prezenta această situaţie în copilărie?",
-            "summaryText": "Adesea nu reușește să fie suficient de atent la detalii, sau face greșeli din neatenție în activităţile şcolare, la locul de muncă sau în timpul altor activități",
-            "questionNumber": "A1",
-            "adulthoodOptions": ["Face greșeli din neatenție",
-                              "Trebuie sa lucreaze încet pentru a evita greșelile",
-                              "Nu citește instrucțiunile cu atenție",
-                              "Are dificultăți în a desfăşura activități detaliate",
-                              "Necesită prea mult timp pentru detalii",
-                              "Se încurcă ușor în detalii",
-                              "Lucrează prea repede și din acest motiv face greșeli"
-                              ],
-            "childhoodOptions": ["Greșeli din neatenție în activitățile școlare",
-                              "Greșeli făcute pentru că nu citește întrebările cu atenţie",
-                              "Lasă întrebări fără răspuns pentru că nu le citeşte cu atenţie",
-                              "Nu răspunde la întrebările unui test aflate pe verso",
-                              "Ceilalți comentează cu privire la munca neglijentă",
-                              "Nu verifică răspunsurile în tema pentru acasă",
-                              "Necesită prea mult timp pentru a efectua sarcini detaliate"]
-          },
-          {
-              "id": 2,
-              "questionText": "Vi se întâmplă des să nu reuşiţi să acordaţi atenţie susţinută sarcinilor? Cum se prezenta această situaţie în copilărie?",
-              "summaryText": "A2. Adesea întâmpină dificultăți în menținerea atenției asupra sarcinilor sau jocurilor",
-              "questionNumber": "A2",
-              "adulthoodOptions": ["Nu poate menține pentru mult timp atenția asupra sarcinilor",
-                              "Este repede distras de propriile gânduri sau asocieri",
-                              "Îi este dificil să urmărească un film până la sfârșit, sau să citească o carte",
-                              "Se plictisește repede de lucruri",
-                              "Pune întrebări asupra unor subiecte care au fost deja discutate"],
-              "childhoodOptions": ["Dificultate în a îşi menţine atenţia asupra activității școlare",
-                  "Dificultate în a îşi menţine atenţia asupra jocului",
-                  "Atenţia îi este distrasă uşor",
-                  "Dificultăţi de concentrare",
-                  "Are nevoie de pattern-uri fixe in viata de zi cu zi pentru a nu fi distras",
-                  "Se plictisește repede de activități"]
-            },
-            {
-              "id": 3,
-              "questionText": "Vi se întâmplă des să vi se pară că nu ascultați atunci când cineva vi se adresează direct? Cum se prezenta această situaţie în copilărie?",
-              "summaryText": "Adesea pare să nu asculte când i se vorbește direct",
-              "questionNumber": "A3",
-              "adulthoodOptions": [
-                "Visător sau preocupat",
-                "Dificultate în a se concentra asupra unei conversații",
-                "Ulterior, nu mai știe despre ce a fost conversația",
-                "Schimbare frecventă a subiectului conversației",
-                "Alte persoane spun că esti cu gândul în altă parte"],
-              "childhoodOptions": [
-                "Nu știe ce au spus părinții/profesorii",
-                "Visător sau preocupat",
-                "Ascultă doar în timpul contactului vizual sau când este ridicat tonul",
-                "Trebuie să fie adesea readresat",
-                "Întrebările trebuie să fie repetate"]
-            }
-        ]
-      },
-      {
-        "sectionNumber": 2,
-        "questions": [
-          {
-            "id": 1,
-            "questionText": "Vi se întâmplă des să nu reuşiţi să acordaţi atenţie detaliilor sau faceţi greşeli din neatenţie la locul de muncă sau în timpul altor activităţi? Cum se prezenta această situaţie în copilărie?",
-            "summaryText": "Adesea nu reușește să fie suficient de atent la detalii, sau face greșeli din neatenție în activităţile şcolare, la locul de muncă sau în timpul altor activități",
-            "questionNumber": "H1",
-            "adulthoodOptions": ["Face greșeli din neatenție",
-                              "Trebuie sa lucreaze încet pentru a evita greșelile",
-                              "Nu citește instrucțiunile cu atenție",
-                              "Are dificultăți în a desfăşura activități detaliate",
-                              "Necesită prea mult timp pentru detalii",
-                              "Se încurcă ușor în detalii",
-                              "Lucrează prea repede și din acest motiv face greșeli"
-                              ],
-            "childhoodOptions": ["Greșeli din neatenție în activitățile școlare",
-                              "Greșeli făcute pentru că nu citește întrebările cu atenţie",
-                              "Lasă întrebări fără răspuns pentru că nu le citeşte cu atenţie",
-                              "Nu răspunde la întrebările unui test aflate pe verso",
-                              "Ceilalți comentează cu privire la munca neglijentă",
-                              "Nu verifică răspunsurile în tema pentru acasă",
-                              "Necesită prea mult timp pentru a efectua sarcini detaliate"]
-          },
-          {
-              "id": 2,
-              "questionText": "Vi se întâmplă des să nu reuşiţi să acordaţi atenţie susţinută sarcinilor? Cum se prezenta această situaţie în copilărie?",
-              "summaryText": "A2. Adesea întâmpină dificultăți în menținerea atenției asupra sarcinilor sau jocurilor",
-              "questionNumber": "H2",
-              "adulthoodOptions": ["Nu poate menține pentru mult timp atenția asupra sarcinilor",
-                              "Este repede distras de propriile gânduri sau asocieri",
-                              "Îi este dificil să urmărească un film până la sfârșit, sau să citească o carte",
-                              "Se plictisește repede de lucruri",
-                              "Pune întrebări asupra unor subiecte care au fost deja discutate"],
-              "childhoodOptions": ["Dificultate în a îşi menţine atenţia asupra activității școlare",
-                  "Dificultate în a îşi menţine atenţia asupra jocului",
-                  "Atenţia îi este distrasă uşor",
-                  "Dificultăţi de concentrare",
-                  "Are nevoie de pattern-uri fixe in viata de zi cu zi pentru a nu fi distras",
-                  "Se plictisește repede de activități"]
-            }
-        ]
-      }, 
-      {
-        "sectionNumber": 3,
-        "questions": [
-          {
-            "id": 1,
-            "questionText": "Muncă/educație",
-            "summaryText": "Muncă/educație",
-            "questionNumber": "",
-            "adulthoodOptions": [
-              "Nu ați finalizat studiile/formarea necesară locului de muncă",
-              "Munciți sub nivelul de educație",
-              "Vă plictisiți repede de un loc de muncă",
-              "Tipar de slujbe numeroase, de scurtă durată",
-              "Nu reușiți să avansați"
-            ],
-            "childhoodOptions": ["Nivel educațional scăzut față de cel așteptat pe baza IQ-ului",
-            "Finalizarea studiilor a durat mult mai mult decât în mod obişnuit"
-            ]
-          },
-          {
-            "id": 2,
-            "questionText": "Relație și/sau familie",
-            "summaryText": "Relație și/sau familie",
-            "questionNumber": "",
-            "adulthoodOptions": [
-              "Nu ați finalizat studiile/formarea necesară locului de muncă",
-              "Munciți sub nivelul de educație",
-              "Vă plictisiți repede de un loc de muncă",
-              "Tipar de slujbe numeroase, de scurtă durată",
-              "Nu reușiți să avansați"
-            ],
-            "childhoodOptions": ["Nivel educațional scăzut față de cel așteptat pe baza IQ-ului",
-            "Finalizarea studiilor a durat mult mai mult decât în mod obişnuit"
-            ]
-          },
-          {
-            "id": 3,
-            "questionText": "Altele",
-            "summaryText": "Relație și/sau familie",
-            "questionNumber": "",
-            "adulthoodOptions": [
-              "Nu ați finalizat studiile/formarea necesară locului de muncă",
-              "Munciți sub nivelul de educație",
-              "Vă plictisiți repede de un loc de muncă",
-              "Tipar de slujbe numeroase, de scurtă durată",
-              "Nu reușiți să avansați"
-            ],
-            "childhoodOptions": ["Nivel educațional scăzut față de cel așteptat pe baza IQ-ului",
-            "Finalizarea studiilor a durat mult mai mult decât în mod obişnuit"
-            ]
-          }
+  "sections": [
+    {
+      "sectionNumber": 1,
+      "questions": [
+        {
+          "id": 1,
+          "questionText": "Vi se întâmplă des să nu reuşiţi să acordaţi atenţie detaliilor sau faceţi greşeli din neatenţie la locul de muncă sau în timpul altor activităţi? Cum se prezenta această situaţie în copilărie?",
+          "summaryText": "Adesea nu reușește să fie suficient de atent la detalii, sau face greșeli din neatenție în activităţile şcolare, la locul de muncă sau în timpul altor activități",
+          "questionNumber": "A1",
+          "adulthoodOptions": [
+            "Face greșeli din neatenție",
+            "Trebuie sa lucreaze încet pentru a evita greșelile",
+            "Nu citește instrucțiunile cu atenție",
+            "Are dificultăți în a desfăşura activități detaliate",
+            "Necesită prea mult timp pentru detalii",
+            "Se încurcă ușor în detalii",
+            "Lucrează prea repede și din acest motiv face greșeli"
+          ],
+          "childhoodOptions": [
+            "Greșeli din neatenție în activitățile școlare",
+            "Greșeli făcute pentru că nu citește întrebările cu atenţie",
+            "Lasă întrebări fără răspuns pentru că nu le citeşte cu atenţie",
+            "Nu răspunde la întrebările unui test aflate pe verso",
+            "Ceilalți comentează cu privire la munca neglijentă",
+            "Nu verifică răspunsurile în tema pentru acasă",
+            "Necesită prea mult timp pentru a efectua sarcini detaliate"
+          ]
+        },
+        {
+          "id": 2,
+          "questionText": "Vi se întâmplă des să nu reuşiţi să acordaţi atenţie susţinută sarcinilor? Cum se prezenta această situaţie în copilărie?",
+          "summaryText": "A2. Adesea întâmpină dificultăți în menținerea atenției asupra sarcinilor sau jocurilor",
+          "questionNumber": "A2",
+          "adulthoodOptions": [
+            "Nu poate menține pentru mult timp atenția asupra sarcinilor",
+            "Este repede distras de propriile gânduri sau asocieri",
+            "Îi este dificil să urmărească un film până la sfârșit, sau să citească o carte",
+            "Se plictisește repede de lucruri",
+            "Pune întrebări asupra unor subiecte care au fost deja discutate"
+          ],
+          "childhoodOptions": [
+            "Dificultate în a îşi menţine atenţia asupra activității școlare",
+            "Dificultate în a îşi menţine atenţia asupra jocului",
+            "Atenţia îi este distrasă uşor",
+            "Dificultăţi de concentrare",
+            "Are nevoie de pattern-uri fixe in viata de zi cu zi pentru a nu fi distras",
+            "Se plictisește repede de activități"
+          ]
+        },
+        {
+          "id": 3,
+          "questionText": "Vi se întâmplă des să vi se pară că nu ascultați atunci când cineva vi se adresează direct? Cum se prezenta această situaţie în copilărie?",
+          "summaryText": "Adesea pare să nu asculte când i se vorbește direct",
+          "questionNumber": "A3",
+          "adulthoodOptions": [
+            "Visător sau preocupat",
+            "Dificultate în a se concentra asupra unei conversații",
+            "Ulterior, nu mai știe despre ce a fost conversația",
+            "Schimbare frecventă a subiectului conversației",
+            "Alte persoane spun că esti cu gândul în altă parte"
+          ],
+          "childhoodOptions": [
+            "Nu știe ce au spus părinții/profesorii",
+            "Visător sau preocupat",
+            "Ascultă doar în timpul contactului vizual sau când este ridicat tonul",
+            "Trebuie să fie adesea readresat",
+            "Întrebările trebuie să fie repetate"
+          ]
+        },
+        {
+          "id": 4,
+          "questionText": "Vi se întâmplă adesea să nu reuşiţi să urmaţi instrucțiuni sau să finalizaţi sarcini sau să vă îndepliniţi obligațiile de la locul de muncă? Cum se prezenta această situaţie în copilărie?",
+          "summaryText": "Adesea nu respectă instrucțiuni și nu finalizează activităţile şcolare, sarcinile casnice sau cele de la locul de muncă",
+          "questionNumber": "A4",
+          "adulthoodOptions": [
+            "Face lucruri în mod dezordonat fără a le finaliza",
+            "Dificultate în a finaliza sarcini odată ce noutatea a disparut",
+            "Are nevoie de o limită de timp pentru a finaliza sarcinile",
+            "Dificultate în a finaliza sarcini administrative",
+            "Dificultate în a urma instrucțiunile dintr-un manual"
+          ],
+          "childhoodOptions": [
+            "Dificultate în a urma instrucțiuni",
+            "Dificultate în a urma instrucțiuni care implică mai mult de un pas",
+            "Nu finalizează lucrurile",
+            "Nu finalizează tema sau nu o predă",
+            "Are nevoie de o structură solidă pentru a finaliza sarcini"
+          ]
+        },
+        {
+          "id": 5,
+          "questionText": "Vi se pare adesea dificil să organizați sarcini și activități? Cum se prezenta această situație în copilărie?",
+          "summaryText": "Adesea întâmpină dificultăți în organizarea sarcinilor și activităților",
+          "questionNumber": "A5",
+          "adulthoodOptions": [
+            "Dificultate în planificarea activităților de zi cu zi",
+            "Casa și/sau locul de muncă sunt dezordonate",
+            "Planificarea prea multor sarcini sau planificare ineficientă",
+            "Programează în mod regulat evenimente care se petrec în același timp",
+            "Sosește târziu",
+            "Nu poate utiliza agenda sau jurnalul în mod constant",
+            "Inflexibil din cauza nevoii de a se conforma graficelor",
+            "Noțiune slabă a timpului",
+            "Realizeaza planuri dar nu le respectă",
+            "Are nevoie de alte persoane pentru a structura lucrurile"
+          ],
+          "childhoodOptions": [
+            "Dificultate în a fi gata la timp",
+            "Cameră sau birou dezordonat",
+            "Dificultate în a se juca singur",
+            "Dificultate în a planifica sarcini sau activităţi şcolare",
+            "Activităţile sunt realizate în mod dezorganizat",
+            "Sosește târziu",
+            "Noțiune slabă a timpului",
+            "Dificultate în a se menține interesat"
+          ]
+        },
+        {
+          "id": 6,
+          "questionText": "Vi se întâmplă adesea să evitaţi (sau aveți o aversiune vizavi de, sau nu doriți să faceți) sarcini care implică un efort mental susținut? Cum se prezenta această situație în copilărie?",
+          "summaryText": "Adesea evită, nu îi place sau ezită să se implice în sarcini care necesită efort mental susținut (precum tema de la școală)",
+          "questionNumber": "A6",
+          "adulthoodOptions": [
+            "Face mai întâi lucrurile cele mai ușoare sau plăcute",
+            "Adesea amână sarcinile plictisitoare sau dificile",
+            "Amână sarcinile, ratând termenul limită",
+            "Evită activitatea monotonă, precum administrația",
+            "Nu îi place să citească din cauza efortului mental",
+            "Evită sarcinile care implică un nivel ridicat de concentrare"
+          ],
+          "childhoodOptions": [
+            "Evită activităţile şcolare sau are o aversiune față de acestea",
+            "Citește puține cărți sau nu vrea să citească din cauza efortului mental",
+            "Evită sarcinile care implică un nivel ridicat de concentrare",
+            "Aversiune față de subiectele de la școală care implică un nivel ridicat de concentrare",
+            "Amână adesea sarcinile plictisitoare sau dificile."
+          ]
+        },
+        {
+          "id": 7,
+          "questionText": "Vi se întâmplă adesea să pierdeți adesea lucruri care sunt necesare pentru sarcini sau activități? Cum se prezenta această situație în copilărie?",
+          "summaryText": "Adesea pierde lucruri care sunt necesare pentru sarcini sau activități",
+          "questionNumber": "A7",
+          "adulthoodOptions": [
+            "Își rătăcește portofelul, cheile sau agenda",
+            "Uită adesea lucrurile în urmă",
+            "Pierde hârtiile de la locul de muncă",
+            "Pierde mult timp căutând lucruri",
+            "Intră în panică dacă alți oameni mută lucrurile din jurul său",
+            "Depozitează lucrurile în locuri greșite",
+            "Pierde notițe, liste sau numere de telefon"
+          ],
+          "childhoodOptions": [
+            "Pierde jurnale, stilouri, echipamentul sportiv sau alte articole",
+            "Își rătăcește jucăriile, hainele sau tema",
+            "Pierde mult timp căutând lucruri",
+            "Intră în panică dacă alți oameni mută lucrurile din jurul său",
+            "Comentarii din partea părinților și/sau profesorilor cu privire la pierderea lucrurilor"
+          ]
+        },
+        {
+          "id": 8,
+          "questionText": "Vi se întâmplă adesea să fiţi ușor distras de stimuli externi? Cum se prezenta această situație în copilărie?",
+          "summaryText": "Adesea este distras de stimuli externi",
+          "questionNumber": "A8",
+          "adulthoodOptions": [
+            "Dificultate în a ignora stimulii externi",
+            "După ce a fost distras, are dificultăţi în a relua firul",
+            "Rapid distras de zgomote sau evenimente",
+            "Ușor distras de conversațiile altora",
+            "Dificultate în a filtra și/sau selecta informațiilor"
+          ],
+          "childhoodOptions": [
+            "În clasă se uită adesea afară",
+            "Ușor distras de zgomote sau evenimente",
+            "După ce a fost distras, are dificultăţi în a relua firul"
+          ]
+        },
+        {
+          "id": 9,
+          "questionText": "Vi se întâmplă adesea să aveţi pierderi de memorie în timpul activităților zilnice? Cum se prezenta această situație în copilărie?",
+          "summaryText": "Adesea uită de activitățile zilnice",
+          "questionNumber": "A9",
+          "adulthoodOptions": [
+            "Uită de întâlniri sau alte obligații",
+            "Își uită cheile, agenda etc.",
+            "Are nevoie în mod frecvent de reamintirea întâlnirilor",
+            "Se întoarce acasă să ia lucrurile uitate",
+            "Utilizarea de liste precise pentru a se asigura că nu uită lucrurile",
+            "Uită să ţină sau să se uite în agenda zilnică"
+          ],
+          "childhoodOptions": [
+            "Uită de întâlniri sau instrucțiuni",
+            "Trebuie să i se reamintească în mod frecvent lucrurile",
+            "La jumătatea îndeplinirii unei sarcini, uită ce are de făcut",
+            "Uită să ia anumite lucruri la școală",
+            "Uită lucruri la școală sau acasă la prieteni"
           ]
         }
       ]
-  }
-  
+    },
+    {
+      "sectionNumber": 2,
+      "questions": [
+        {
+          "id": 1,
+          "questionText": "Mișcați adesea din mâini sau din picioare în mod agitat sau vă legănaţi adesea pe scaun? Cum se prezenta această situație în copilărie?",
+          "summaryText": "Își mișcă adesea mâinile sau picioarele sau se agită pe scaun",
+          "questionNumber": "H/I1",
+          "adulthoodOptions": [
+            "Dificultate în a sta liniștit",
+            "Mişcare agitată a picioarelor",
+            "Bate cu un creion sau se joacă cu ceva",
+            "Se joacă cu părul sau își roade unghiile",
+            "Își poate controla agitația dar se simte stresat din această cauză"
+          ],
+          "childhoodOptions": [
+            "Părinții i-au spus adesea “stai cuminte” sau similar",
+            "Mişcare agitată a picioarelor",
+            "Bate cu un creion sau se joacă cu ceva",
+            "Se joacă cu părul sau își roade unghiile",
+            "Nu poate sta liniștit pe scaun",
+            "Își poate controla agitația dar se simte stresat din această cauză"
+          ]
+        },
+        {
+          "id": 2,
+          "questionText": "Vi se întâmplă adesea să stați în picioare în situații în care ar trebui să rămâneți așezat? Cum se prezenta această situație în copilărie?",
+          "summaryText": "Își părăsește adesea locul din clasă sau în alte situații în care trebuie să rămână așezat",
+          "questionNumber": "H/I2",
+          "adulthoodOptions": [
+            "Evită simpozioanele, conferințele, biserica, etc.",
+            "Preferă să se miște decât să stea jos",
+            "Nu stă niciodată liniștit pentru mult timp, este în continuă mișcare",
+            "Este stresat din cauza dificultății de a sta liniștit",
+            "Își găsește scuze pentru a se putea mișca"
+          ],
+          "childhoodOptions": [
+            "Se ridică adesea în timp ce mănâncă sau când este în clasă",
+            "Îi este foarte greu să stea jos la școală sau în timp ce mănâncă",
+            "I se spune să stea așezat",
+            "Își găsește scuze pentru a se putea mișca"
+          ]
+        },
+        {
+          "id": 3,
+          "questionText": "Se întâmplă des să vă simțiți neliniștit? Cum se prezenta această situație în copilărie?",
+          "summaryText": "Adesea aleargă sau se cațără în mod excesiv în situații în care acest lucru nu este adecvat (la adolescenți sau adulți această manifestare se poate limita la stări subiective de nelinişte)",
+          "questionNumber": "H/I3",
+          "adulthoodOptions": [
+            "Se simte neliniștit sau agitat în interior",
+            "Are în permanenţă sentimentul că trebuie să facă ceva",
+            "Îi este greu să se relaxeze"
+          ],
+          "childhoodOptions": [
+            "Aleargă întotdeauna",
+            "Se urcă pe mobilă sau sare pe canapea",
+            "Se urcă în copaci",
+            "Se simte neliniștit în interior"
+          ]
+        },
+        {
+          "id": 4,
+          "questionText": "Vi se pare dificil adesea să vă implicaţi în liniște în activități recreative? Cum se prezenta această situație în copilărie?",
+          "summaryText": "Adesea întâmpină dificultăţi în a se juca sau a se implica în liniște în activități recreative",
+          "questionNumber": "H/I 4",
+          "adulthoodOptions": [
+            "Vorbește în timpul activităților în momente nepotrivite",
+            "Atrage rapid atentia publicului prin modul de a vorbi si de a se comporta",
+            "Vorbește cu voce tare în tot felul de situații",
+            "Dificultate în a efectua activități în liniște",
+            "Dificultate în a vorbi încet"
+          ],
+          "childhoodOptions": [
+            "Vorbește cu voce tare în timp ce se joacă sau în clasă",
+            "Nu se poate uita la televizor sau viziona filme în liniște",
+            "I se cere să fie mai linistit/mai calm",
+            "Atrage rapid atentia publicului prin modul de a vorbi si de a se comporta"
+          ]
+        },
+        {
+          "id": 5,
+          "questionText": "Sunteți intotdeauna ocupat, adesea pe fugă si mereu va aflati in miscare? Cum se prezenta această situație în copilărie?",
+          "summaryText": "Adesea este pe fugă sau mereu in miscare",
+          "questionNumber": "H/I 5",
+          "adulthoodOptions": [
+            "Este mereu ocupat cu ceva",
+            "Are multă energie, este mereu în mișcare",
+            "Își depășește propriile limite",
+            "Renunță foarte greu la lucruri, este excesiv de motivat"
+          ],
+          "childhoodOptions": [
+            "Este mereu ocupat",
+            "Evident activ la școală și acasă",
+            "Are multă energie",
+            "Este mereu în mișcare, excesiv de motivat"
+          ]
+        },
+        {
+          "id": 6,
+          "questionText": "Vorbiți adesea în mod excesiv? Cum se prezenta această situație în copilărie?",
+          "summaryText": "Adesea vorbește in continuu, fara sa se opreasca",
+          "questionNumber": "H/I 6",
+          "adulthoodOptions": [
+            "Vorbeste in continuu încât îi obosește pe ceilalți",
+            "Este cunoscut că vorbește în continuu",
+            "Îi este greu să se oprească din vorbit",
+            "Are tendința de a vorbi prea mult",
+            "Nu îi lasă pe ceilalți să intervină în conversație",
+            "Are nevoie de multe cuvinte pentru a spune ceva"
+          ],
+          "childhoodOptions": [
+            "Este cunoscut ca gură-spartă",
+            "Adesea, profesorii și părinții îi cer să tacă",
+            "Comentarii în rapoartele școlare asupra faptului că vorbește prea mult",
+            "Este pedepsit pentru că vorbește prea mult",
+            "Îi împiedică pe ceilalți să își facă tema pentru că vorbește prea mult",
+            "Nu îi lasă pe ceilalți să intervină în conversație"
+          ]
+        },
+        {
+          "id": 7,
+          "questionText": "Vi se întâmplă adesea să dați răspunsul înainte de terminarea întrebărilor? Cum se prezenta această situație în copilărie?",
+          "summaryText": "Adesea îi scapă răspunsurile înainte să se termine întrebarea",
+          "questionNumber": "H/I 7",
+          "adulthoodOptions": [
+            "Spune tot ce-i trece prin minte, fara sa se gandeasca",
+            "Spune lucrurile fără să le gândească înainte",
+            "Le dă celorlalți răspunsurile înainte de a termina de vorbit",
+            "Completează ceea ce spun ceilalți",
+            "Este lipsit de tact"
+          ],
+          "childhoodOptions": [
+            "Este gură-spartă, spune lucrurile fără să le gândească înainte",
+            "Vrea să fie primul care răspunde la întrebări la școală",
+            "Îi scapă un răspuns chiar dacă este greșit",
+            "Îi întrerupe pe ceilalți înainte să își termine propoziția",
+            "Este cunoscut ca fiind lipsit de tact"
+          ]
+        },
+        {
+          "id": 8,
+          "questionText": "Se întâmplă des să vă fie greu să vă așteptați rândul? Cum se prezenta această situație în copilărie?",
+          "summaryText": "Adesea întâmpină dificultăți în a îşi aştepta rândul",
+          "questionNumber": "H/I",
+          "adulthoodOptions": [
+            "Îi este greu să stea la coadă, sare peste rând",
+            "Îi este greu să fie calm in trafic în trafic",
+            "Îi este greu să își aștepte rândul în timpul unor conversații",
+            "Este nerăbdător",
+            "Începe rapid relații/posturi sau le încheie/părăsește din cauza nerăbdării"
+          ],
+          "childhoodOptions": [
+            "Îi este greu să își aștepte rândul în activități sportive/jocuri",
+            "Îi este greu să își aștepte rândul în clasă",
+            "Este mereu primul care vorbeşte sau acționează",
+            "Își pierde repede răbdarea",
+            "Traversează strada fără să se asigure"
+          ]
+        },
+        {
+          "id": 9,
+          "questionText": "Se întâmplă des să deranjati sau sa interveniti nepoftit in activitatile altora? Cum se prezenta această situație în copilărie?",
+          "summaryText": "Adesea întrerupe sau intervine în activitatile altora",
+          "questionNumber": "H/I 9",
+          "adulthoodOptions": [
+            "Se amestecă repede în treburile altora",
+            "Îi întrerupe pe ceilalți",
+            "Deranjează activitățile altora fără să fie întrebat",
+            "Comentarii din partea celorlalți cu privire la interventia sa",
+            "Dificultate în a respecta limitele altora",
+            "Are o părere despre orice și o exprimă imediat"
+          ],
+          "childhoodOptions": [
+            "Intervine în jocul celorlalți",
+            "Întrerupe conversația celorlalți",
+            "Reacționează la orice",
+            "Nu poate aștepta"
+          ]
+        }
+      ]
+    },
+    {
+      "sectionNumber": 3,
+      "questions": [
+        {
+          "id": 1,
+          "questionText": "Muncă/educație",
+          "summaryText": "Muncă/educație",
+          "questionNumber": "",
+          "adulthoodOptions": [
+            "Nu ați finalizat studiile/formarea necesară locului de muncă",
+            "Munciți sub nivelul de educație",
+            "Vă plictisiți repede de un loc de muncă",
+            "Tipar de slujbe numeroase, de scurtă durată",
+            "Dificultăți în a desfăşura activităţi administrative/de planificare",
+            "Nu reușiți să avansați",
+            "Performanțe la locul de muncă sub potential",
+            "Ați părăsit locul de muncă în urma unor certuri sau concedierii",
+            "Indemnizaţie de boală/indemnizaţie de dizabilitate ca urmare a simptomelor",
+            "Tulburare limitată prin compensare cu un IQ ridicat",
+            "Tulburare limitată prin compensare cu structura externă"
+          ],
+          "childhoodOptions": [
+            "Nivel educațional scăzut față de cel așteptat pe baza IQ-ului",
+            "Rămâneți în urmă (repetarea claselor) din cauza problemelor de concentrare",
+            "Studii nefinalizate/respins din școală",
+            "Finalizarea studiilor a durat mult mai mult decât în mod obişnuit",
+            "Finalizarea studiilor pe măsura IQ-ului cu mult efort",
+            "Dificultate în efectuarea temelor",
+            "Ați urmat o formă specială de învățământ din cauza simptomelor",
+            "Comentarii de la profesori cu privire la comportament sau concentrare",
+            "Tulburare limitată prin compensare cu un IQ ridicat",
+            "Tulburare limitată prin compensare cu structura externă"
+          ]
+        },
+        {
+          "id": 2,
+          "questionText": "Relație și/sau familie",
+          "summaryText": "Relație și/sau familie",
+          "questionNumber": "",
+          "adulthoodOptions": [
+            "Vă plictisiți repede de relații",
+            "Începeți/încheiați relațiile în mod impulsiv",
+            "Relație inegală cu partenerul din cauza simptomelor",
+            "Probleme în relație, multe certuri, lipsa intimității",
+            "Divorț din cauza simptomelor",
+            "Probleme de sexualitate din cauza simptomelor",
+            "Probleme de creștere din cauza simptomelor",
+            "Dificultăți în activitatea menajeră și/sau administrativă",
+            "Probleme financiare sau cu jocurile de noroc",
+            "Nu aveți curajul să începeți o relație"
+          ],
+          "childhoodOptions": [
+            "Certuri frecvente cu frații sau cu surorile",
+            "Pedepse sau ascundere în mod frecvent",
+            "Contact redus cu familia din cauza conflictelor",
+            "Este necesară o structură din partea părinților, pentru o perioadă mai lungă decât în mod normal"
+          ]
+        },
+        {
+          "id": 3,
+          "questionText": "Relații sociale",
+          "summaryText": "Relații sociale",
+          "questionNumber": "",
+          "adulthoodOptions": [
+            "Se plictiseşte repede de relațiile sociale",
+            "Dificultate în a menține relații sociale",
+            "Conflicte din cauza problemelor de comunicare",
+            "Dificultate în a iniția relații sociale",
+            "Asertivitate diminuata din cauza experiențelor negative",
+            "Nu este grijuliu (mai exact, uită să trimită o felicitare/să dea dovadă de compasiune/să telefoneze, etc.)"
+          ],
+          "childhoodOptions": [
+            "Dificultate în a menține relații sociale",
+            "Conflicte din cauza problemelor de comunicare",
+            "Dificultate în a crea relații sociale",
+            "Asertivitate diminuata din cauza experiențelor negative",
+            "Puțini prieteni",
+            "Este tachinat",
+            "Este exclus sau nu i se permite să facă anumite lucruri împreună cu un grup",
+            "Este un bătăuş"
+          ]
+        },
+        {
+          "id": 4,
+          "questionText": "Timp liber/hobby",
+          "summaryText": "Timp liber/hobby",
+          "questionNumber": "",
+          "adulthoodOptions": [
+            "Nu se poate relaxa cum trebuie în timpul liber",
+            "Este nevoit să facă mult sport pentru a se putea relaxa",
+            "Suferă frecvent răni din cauza sportului",
+            "Nu poate citi o carte sau viziona un film până la capăt",
+            "Este ocupat în permanență și, prin urmare, devine foarte obosit",
+            "Se plictiseşte repede de hobby-uri",
+            "Din cauza comportamentului necugetat în trafic suferă accidente/îşi pierde permisul de conducere",
+            "Caută senzații tari și/sau îşi asumă prea multe riscuri",
+            "Contact cu poliția/tribunale",
+            "Consum excesiv de mâncare"
+          ],
+          "childhoodOptions": [
+            "Nu se poate relaxa cum trebuie în timpul liber",
+            "Este nevoit să facă mult sport pentru a se putea relaxa",
+            "Suferă frecvent răni din cauza sportului",
+            "Nu poate citi o carte sau viziona un film până la capăt",
+            "Este ocupat în permanență și, prin urmare, devine foarte obosit",
+            "Se plictiseşte repede de hobby-uri",
+            "Caută senzații tari și/sau îşi asumă prea multe riscuri",
+            "Contact cu poliția/tribunale",
+            "Număr mare de accidente"
+          ]
+        },
+        {
+          "id": 5,
+          "questionText": "Încredere în sine/imagine de sine",
+          "summaryText": "Încredere în sine/imagine de sine",
+          "questionNumber": "",
+          "adulthoodOptions": [
+            "Nesiguranță din cauza comentariilor negative ale altora",
+            "Imagine de sine negativă din cauza unor eșecuri",
+            "Teamă de eșec atunci când începe lucruri noi",
+            "Reacție violenta la critici",
+            "Perfecționism",
+            "Deranjat de simptomele de ADHD"
+          ],
+          "childhoodOptions": [
+            "Nesiguranță din cauza comentariilor negative ale altora",
+            "Imagine de sine negativă din cauza unor eșecuri",
+            "Teama de eșec atunci când începe lucruri noi",
+            "Reacție violenta la critici",
+            "Perfecționism"
+          ]
+        }
+      ]
+    }
+  ]
+}
