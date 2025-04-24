@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
 
 const FooterContainer = styled.footer`
   padding: 1rem 2rem;
@@ -10,7 +9,7 @@ const FooterContainer = styled.footer`
   justify-content: center;
 `;
 
-const FooterLink = styled(NavLink)`
+const FooterLink = styled.a`
   color: var(--color-accent-blue);
   text-decoration: none;
   font-size: 0.9rem;
@@ -22,10 +21,41 @@ const FooterLink = styled(NavLink)`
   }
 `;
 
+const InfoBox = styled.div`
+  /* background-color: var(--color-surface-background, #f9f9f9); */
+  color: var(--color-text-muted, #666);
+  /* border-left: 3px solid var(--color-border, #ddd); */
+  padding: 0.75rem 1rem;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  margin: 1rem auto;
+  max-width: 720px;
+  text-align: center;
+
+  a {
+    color: var(--color-accent-blue, #0074cc);
+    text-decoration: underline;
+
+    &:hover {
+      color: var(--color-accent-pink, #3db2c4);
+    }
+  }
+`;
+
 function Footer() {
   return (
     <FooterContainer>
-      <FooterLink>hi.</FooterLink>
+      <InfoBox>
+        Aplicație open-source 🐙 — contribuțiile sunt binevenite pe{" "}
+        <FooterLink
+          href="https://github.com/tu-repo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </FooterLink>{" "}
+        💖
+      </InfoBox>
     </FooterContainer>
   );
 }

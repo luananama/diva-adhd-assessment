@@ -15,7 +15,7 @@ const HeaderContainer = styled.header`
 
 const Title = styled.h1`
   font-family: "Karla", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: var(--color-gray-900);
   margin: 0;
   font-weight: 700;
