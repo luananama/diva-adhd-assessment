@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import StyledButton from "./StyledButton";
+import { useAssessment } from "../../contexts/AssessmentContext";
+import { useNavigate } from "react-router-dom";
 
 const HeaderContainer = styled.header`
   background-color: var(--color-white);
@@ -88,13 +90,23 @@ const LanguageButton = styled.button`
 `;
 
 function Navbar() {
+  const { clearAssessment } = useAssessment();
+  const navigate = useNavigate();
+
+  const handleStart = () => {
+    clearAssessment();
+    navigate("/"); // go to the start page
+  };
+
   return (
     <HeaderContainer>
       <Title>Interviu privind diagnosticarea ADHD la adulți (DIVA)</Title>
       <Nav>
         <NavList>
           <NavItem>
-            <StyledButton to="/">Assessment</StyledButton>
+            <StyledButton as="button" onClick={handleStart}>
+              Assessment
+            </StyledButton>
           </NavItem>
           <NavItem>
             <RegularLink to="/about">About</RegularLink>

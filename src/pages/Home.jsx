@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import StyledButton, { ButtonContainer } from "../components/ui/StyledButton";
+import { useAssessment } from "../contexts/AssessmentContext";
+import { useNavigate } from "react-router-dom";
 
 const HomePageContainer = styled.div`
   display: flex;
@@ -27,6 +29,13 @@ const Citation = styled.div`
 `;
 
 function Home() {
+  const { clearAssessment } = useAssessment();
+  const navigate = useNavigate();
+
+  const handleStart = () => {
+    clearAssessment();
+    navigate("/section/1");
+  };
   return (
     <>
       <HomePageContainer>
@@ -50,7 +59,9 @@ function Home() {
         </Citation>
         <ButtonContainer>
           <StyledButton to="/instructions">Instructions</StyledButton>
-          <StyledButton to="/section/1">Start Assessment</StyledButton>
+          <StyledButton as="button" onClick={handleStart}>
+            Start
+          </StyledButton>
         </ButtonContainer>
       </HomePageContainer>
     </>

@@ -6,17 +6,17 @@ const AssessmentContext = createContext();
 
 export function AssessmentProvider({ children }) {
   const [answers, setAnswers] = useState(() => {
-    // Initialize from localStorage if available
+    // initialize from sessionStorage if available
     if (typeof window !== "undefined") {
-      const saved = localStorage.getItem("adhd-assessment-answers");
+      const saved = sessionStorage.getItem("adhd-assessment-answers");
       return saved ? JSON.parse(saved) : {};
     }
     return {};
   });
 
-  // Persist to localStorage whenever answers change
+  // Persist to sessionStorage whenever answers change
   useEffect(() => {
-    localStorage.setItem("adhd-assessment-answers", JSON.stringify(answers));
+    sessionStorage.setItem("adhd-assessment-answers", JSON.stringify(answers));
   }, [answers]);
 
   const updateAnswers = (section, questionId, value, context = {}) => {
@@ -35,7 +35,7 @@ export function AssessmentProvider({ children }) {
 
   const clearAssessment = () => {
     setAnswers({});
-    localStorage.removeItem("adhd-assessment-answers");
+    sessionStorage.removeItem("adhd-assessment-answers");
   };
 
   return (

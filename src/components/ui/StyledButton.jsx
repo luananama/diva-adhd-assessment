@@ -16,6 +16,7 @@ const StyledButton = styled(NavLink)`
   text-decoration: none;
   background-color: var(--color-primary-alt); /* Drop shadow color */
   border: solid transparent;
+  cursor: pointer;
   border-radius: 16px;
   border-width: 0 0 4px;
   box-sizing: border-box;
