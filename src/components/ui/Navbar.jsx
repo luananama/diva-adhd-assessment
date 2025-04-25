@@ -105,7 +105,7 @@ function Navbar() {
         <NavList>
           <NavItem>
             <StyledButton as="button" onClick={handleStart}>
-              Începe evaluarea
+              Evaluare ADHD
             </StyledButton>
           </NavItem>
           <NavItem>
