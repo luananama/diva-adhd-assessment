@@ -10,7 +10,9 @@ A web-based platform for administering the **DIVA 2.0 ADHD assessment**, built w
 
 It is intended as a tool for medical professionals, and therefore does not provide a diagnosis or any interpretation of the ADHD evaluation beyond the summary of the answers. The target language is Romanian.
 
-![Landing page screenshot](./public/diva-landing-page.png)
+<p align="center">
+  <img src="./assets/screenshot.png" alt="Landing page screenshot" width="500" />
+</p>
 
 ## 🚀 Features
 
