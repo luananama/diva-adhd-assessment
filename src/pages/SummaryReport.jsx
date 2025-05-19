@@ -462,24 +462,20 @@ const SummaryReport = () => {
             </TableCell>
           </tr>
           <tr>
-            <TableHeaderCell rowSpan={8}></TableHeaderCell>
+            <TableHeaderCell></TableHeaderCell>
             <TableCell>Diagnostic ADHD***</TableCell>
+
             <TableCell>
-              <tr>
-                <StyledCheckbox label="Nu" />
-              </tr>
-              <tr>
-                Da, subtip:
-                <MultiOptionToggle
-                  options={[
-                    "314.01 Tip combinat",
-                    "314.00 Tip predominant neatent",
-                    "314.01 Tip predominant Hiperactiv-impulsiv",
-                  ]}
-                  onSelect={(value) => console.log("Selected:", value)}
-                  inline={false}
-                />
-              </tr>
+              <MultiOptionToggle
+                options={[
+                  "Nu",
+                  "314.01 Da, tip combinat",
+                  "314.00 Da, tip predominant neatent",
+                  "314.01 Da, tip predominant Hiperactiv-impulsiv",
+                ]}
+                onSelect={(value) => console.log("Selected:", value)}
+                inline={false}
+              />
             </TableCell>
           </tr>
         </tbody>

@@ -4,7 +4,9 @@ import { useState } from "react";
 import styled from "styled-components";
 import StyledCheckbox from "./StyledCheckbox";
 
-const OptionGroup = styled.div`
+const OptionGroup = styled.div.withConfig({
+  shouldForwardProp: (prop) => prop !== "inline",
+})`
   display: flex;
   flex-direction: ${({ inline }) => (inline ? "row" : "column")};
   gap: 20px;
