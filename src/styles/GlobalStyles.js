@@ -1,6 +1,29 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
+  @media print {
+    nav, footer, button, .non-printable {
+      display: none !important;
+    }
+
+    body {
+      background: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+    }
+  }
+
+
 :root {
   --color-button-fill: #3297a6;
     /* Base colors */

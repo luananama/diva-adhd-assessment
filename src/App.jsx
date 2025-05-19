@@ -8,7 +8,6 @@ import AssessmentSection from "./components/assessment/AssessmentSection";
 import { AssessmentProvider } from "./contexts/AssessmentContext";
 import SummaryReport from "./pages/SummaryReport";
 import Instructions from "./pages/Instructions";
-
 function App() {
   return (
     <>
