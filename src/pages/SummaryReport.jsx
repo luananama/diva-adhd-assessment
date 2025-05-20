@@ -5,7 +5,10 @@ import styled from "styled-components";
 import StyledCheckbox from "../components/ui/StyledCheckbox";
 import SymptomToggle from "../components/ui/SymptomToggle";
 import MultiOptionToggle from "../components/ui/MultioptionToggle";
+import StyledButton from "../components/ui/StyledButton";
+import { pdf } from "@react-pdf/renderer";
 
+import SummaryPDF from "../components/assessment/SummaryPDF";
 const Title = styled.h1`
   text-align: center;
   font-size: 2.2rem;
@@ -97,6 +100,26 @@ const InlineCheckboxGroup = styled.div`
 `;
 
 const SummaryReport = () => {
+  const handleDownloadPDF = async () => {
+    const blob = await pdf(
+      <SummaryPDF
+        section1Questions={section1Questions}
+        section2Questions={section2Questions}
+        section1AdultCount={section1AdultCount}
+        section1ChildCount={section1ChildCount}
+        section2AdultCount={section2AdultCount}
+        section2ChildCount={section2ChildCount}
+        getSymptomResponse={getSymptomResponse}
+      />
+    ).toBlob();
+
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "raport-adhd.pdf";
+    link.click();
+  };
+
   const { answers } = useAssessment();
 
   const section1Questions =
@@ -179,7 +202,7 @@ const SummaryReport = () => {
           {section1Questions.map((q) => (
             <TableRow key={q.id}>
               <TableCell>{q.questionNumber}</TableCell>
-              <TableCell>{q.questionText}</TableCell>
+              <TableCell>{q.summaryText}</TableCell>
               <TableCell>
                 {getSymptomResponse("section1", `adult-${q.id}`)}
               </TableCell>
@@ -201,7 +224,7 @@ const SummaryReport = () => {
           {section2Questions.map((q) => (
             <TableRow key={q.id}>
               <TableCell>{q.questionNumber}</TableCell>
-              <TableCell>{q.questionText}</TableCell>
+              <TableCell>{q.summaryText}</TableCell>
               <TableCell>
                 {getSymptomResponse("section2", `adult-${q.id}`)}
               </TableCell>
@@ -462,24 +485,32 @@ const SummaryReport = () => {
             </TableCell>
           </tr>
           <tr>
-            <TableHeaderCell></TableHeaderCell>
+            <TableHeaderCell rowSpan={8}></TableHeaderCell>
             <TableCell>Diagnostic ADHD***</TableCell>
-
             <TableCell>
-              <MultiOptionToggle
-                options={[
-                  "Nu",
-                  "314.01 Da, tip combinat",
-                  "314.00 Da, tip predominant neatent",
-                  "314.01 Da, tip predominant Hiperactiv-impulsiv",
-                ]}
-                onSelect={(value) => console.log("Selected:", value)}
-                inline={false}
-              />
+              <tr>
+                <StyledCheckbox label="Nu" />
+              </tr>
+              <tr>
+                Da, subtip:
+                <MultiOptionToggle
+                  options={[
+                    "314.01 Tip combinat",
+                    "314.00 Tip predominant neatent",
+                    "314.01 Tip predominant Hiperactiv-impulsiv",
+                  ]}
+                  onSelect={(value) => console.log("Selected:", value)}
+                  inline={false}
+                />
+              </tr>
             </TableCell>
           </tr>
         </tbody>
       </StyledTable>
+
+      <StyledButton as="button" onClick={handleDownloadPDF}>
+        Descarcă PDF
+      </StyledButton>
     </SummaryContainer>
   );
 };
