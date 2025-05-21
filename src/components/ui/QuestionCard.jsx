@@ -123,26 +123,56 @@ const QuestionCard = ({ question, sectionNumber }) => {
 
   const toggleArrayValue = useToggleArrayValue();
 
-  const handleCheckbox = (questionId, selectedIndex, context = {}) => {
-    const rawValue = answers[sectionKey]?.[questionId]?.value;
-    // toggle checkbox - add new value if it doesn't exist, remove it if it does
-    const newValue = toggleArrayValue(rawValue, selectedIndex);
+  const updateSymptom = ({
+    prevAnswer = {},
+    checkboxValue,
+    textValue,
+    context = {},
+  }) => {
+    const value = checkboxValue ?? prevAnswer.value ?? [];
+    const other = textValue ?? prevAnswer.other ?? "";
+    const symptomPresent = value.length > 0 || other.trim().length > 0;
 
-    updateAnswers(sectionKey, questionId, newValue, {
+    return {
+      value,
+      other,
+      symptomPresent,
       ...context,
-      symptomPresent: newValue.length > 0,
-      other: answers[sectionKey]?.[questionId]?.other || "",
+    };
+  };
+
+  const handleCheckbox = (questionId, selectedIndex, context = {}) => {
+    const prevAnswer = answers[sectionKey]?.[questionId] || {};
+    const newValue = toggleArrayValue(prevAnswer.value, selectedIndex);
+
+    const updatedAnswer = updateSymptom({
+      prevAnswer,
+      checkboxValue: newValue,
+      context: {
+        ...context,
+        questionText: question.questionText,
+        summaryText: question.summaryText,
+        optionText: context.optionText,
+      },
     });
+
+    updateAnswers(sectionKey, questionId, updatedAnswer);
   };
 
   const handleTextInput = (questionId, value, context = {}) => {
-    const prevValue = answers[sectionKey]?.[questionId]?.value || [];
+    const prevAnswer = answers[sectionKey]?.[questionId] || {};
 
-    updateAnswers(sectionKey, questionId, prevValue, {
-      ...context,
-      other: value,
-      symptomPresent: prevValue.length > 0,
+    const updatedAnswer = updateSymptom({
+      prevAnswer,
+      textValue: value,
+      context: {
+        ...context,
+        questionText: question.questionText,
+        summaryText: question.summaryText,
+      },
     });
+
+    updateAnswers(sectionKey, questionId, updatedAnswer);
   };
 
   // builds the answers for either the adulthood or childhood part of a question

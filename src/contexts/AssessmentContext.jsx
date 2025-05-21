@@ -18,15 +18,15 @@ export function AssessmentProvider({ children }) {
     sessionStorage.setItem("adhd-assessment-answers", JSON.stringify(answers));
   }, [answers]);
 
-  const updateAnswers = (section, questionId, value, context = {}) => {
+  const updateAnswers = (section, questionId, answerObject) => {
     setAnswers((prev) => ({
       ...prev,
       [section]: {
         ...prev[section],
         [questionId]: {
-          value,
+          ...(prev[section]?.[questionId] || {}),
+          ...answerObject,
           timestamp: new Date().toISOString(),
-          ...context,
         },
       },
     }));
