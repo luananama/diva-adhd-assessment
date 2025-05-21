@@ -5,15 +5,33 @@ const AssessmentContext = createContext();
 
 export function AssessmentProvider({ children }) {
   const [answers, setAnswers] = useState(() => {
-    // initialize from sessionStorage if available
     if (typeof window !== "undefined") {
       const saved = sessionStorage.getItem("adhd-assessment-answers");
-      return saved ? JSON.parse(saved) : {};
+      return saved
+        ? JSON.parse(saved)
+        : {
+            patientInfo: {
+              name: "",
+              birthDate: "",
+              gender: "", // "male", "female", or "other"
+              interviewDate: "",
+              doctorName: "",
+              patientNumber: "",
+            },
+          };
     }
-    return {};
+    return {
+      patientInfo: {
+        name: "",
+        birthDate: "",
+        gender: "", // "male", "female", or "other"
+        interviewDate: "",
+        doctorName: "",
+        patientNumber: "",
+      },
+    };
   });
 
-  // Persist to sessionStorage whenever answers change
   useEffect(() => {
     sessionStorage.setItem("adhd-assessment-answers", JSON.stringify(answers));
   }, [answers]);
@@ -32,14 +50,36 @@ export function AssessmentProvider({ children }) {
     }));
   };
 
+  const updatePatientInfo = (field, value) => {
+    setAnswers((prev) => ({
+      ...prev,
+      patientInfo: {
+        ...prev.patientInfo,
+        [field]: value,
+      },
+    }));
+  };
+
   const clearAssessment = () => {
-    setAnswers({});
+    setAnswers({
+      patientInfo: {
+        name: "",
+        age: "",
+        gender: "",
+        occupation: "",
+      },
+    });
     sessionStorage.removeItem("adhd-assessment-answers");
   };
 
   return (
     <AssessmentContext.Provider
-      value={{ answers, updateAnswers, clearAssessment }}
+      value={{
+        answers,
+        updateAnswers,
+        updatePatientInfo,
+        clearAssessment,
+      }}
     >
       {children}
     </AssessmentContext.Provider>

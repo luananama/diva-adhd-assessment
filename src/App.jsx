@@ -10,6 +10,7 @@ import SummaryReport from "./pages/SummaryReport";
 import Instructions from "./pages/Instructions";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import PatientInformation from "./pages/PatientInformation";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -34,6 +35,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="about" element={<About />} />
               <Route path="instructions" element={<Instructions />} />
+              <Route path="patient-info" element={<PatientInformation />} />
               <Route
                 path="/section/:sectionNumber"
                 element={<AssessmentSection />}

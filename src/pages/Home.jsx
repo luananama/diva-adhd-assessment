@@ -26,7 +26,7 @@ function Home() {
 
   const handleStart = () => {
     clearAssessment();
-    navigate("/section/1");
+    navigate("/patient-info");
   };
   return (
     <>

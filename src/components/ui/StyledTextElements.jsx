@@ -13,7 +13,7 @@ export const PageContainer = styled.div`
 export const PageTitle = styled.h1`
   font-size: 1.5;
   color: var(--color-gray-900);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 `;
 
 export const Paragraph = styled.p`
@@ -46,12 +46,12 @@ export const ReferenceBox = styled.div`
   margin-top: 2rem;
 `;
 
-const Citation = styled.div`
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 2rem;
-  text-align: left;
-`;
+// const Citation = styled.div`
+//   font-size: 1rem;
+//   color: #555;
+//   margin-bottom: 2rem;
+//   text-align: left;
+// `;
 
 // const LeftPageTitle = styled.h1`
 //   font-size: 2rem;
