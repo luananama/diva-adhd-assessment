@@ -53,3 +53,7 @@ It is intended as a tool for medical professionals, and therefore does not provi
    ```
    npm run dev
    ```
+
+## Credits
+
+Adhd icon created by [afif fudin](https://www.flaticon.com/authors/afif-fudin) - Flaticon

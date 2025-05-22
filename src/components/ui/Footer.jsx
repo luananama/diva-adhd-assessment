@@ -22,13 +22,10 @@ const FooterLink = styled.a`
 `;
 
 const InfoBox = styled.div`
-  /* background-color: var(--color-surface-background, #f9f9f9); */
   color: var(--color-text-muted, #666);
-  /* border-left: 3px solid var(--color-border, #ddd); */
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
   font-size: 0.8rem;
   border-radius: 4px;
-  margin: 1rem auto;
   max-width: 720px;
   text-align: center;
 
@@ -41,7 +38,11 @@ const InfoBox = styled.div`
     }
   }
 `;
-
+const Attribution = styled.small`
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+`;
 function Footer() {
   return (
     <FooterContainer>
@@ -55,6 +56,15 @@ function Footer() {
           GitHub
         </FooterLink>{" "}
         💖
+        <br />
+        <Attribution>
+          <a
+            href="https://www.flaticon.com/authors/afif-fudin"
+            title="icon by afif fudin"
+          >
+            Adhd icon created by afif fudin - Flaticon
+          </a>
+        </Attribution>
       </InfoBox>
     </FooterContainer>
   );
