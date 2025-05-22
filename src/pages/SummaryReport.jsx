@@ -4,7 +4,7 @@ import questionsData from "../assets/questions.json";
 import styled from "styled-components";
 import StyledCheckbox from "../components/ui/StyledCheckbox";
 import SymptomToggle from "../components/ui/SymptomToggle";
-import MultiOptionToggle from "../components/ui/MultioptionToggle";
+import MultiOptionToggle from "../components/ui/MultiOptionToggle";
 
 const Title = styled.h1`
   text-align: center;
