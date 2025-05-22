@@ -96,8 +96,38 @@ const InlineCheckboxGroup = styled.div`
   align-items: center;
 `;
 
+const PatientInfoBox = styled.div`
+  background-color: var(--color-white);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1rem;
+  color: var(--color-gray-800);
+`;
+
+const InfoRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  span {
+    flex: 1 1 45%;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+`;
+
 const SummaryReport = () => {
   const { answers } = useAssessment();
+
+  const patientInfo = answers.patientInfo || {};
 
   const section1Questions =
     questionsData.sections.find((s) => s.sectionNumber === 1)?.questions || [];
@@ -163,6 +193,33 @@ const SummaryReport = () => {
     <SummaryContainer>
       <Title>Symptom Summary</Title>
 
+      <PatientInfoBox>
+        <InfoRow>
+          <span>
+            <strong>Nume pacient:</strong> {patientInfo.name || "—"}
+          </span>
+          <span>
+            <strong>Data nașterii:</strong> {patientInfo.birthDate || "—"}
+          </span>
+        </InfoRow>
+        <InfoRow>
+          <span>
+            <strong>Gen:</strong> {patientInfo.gender || "—"}
+          </span>
+          <span>
+            <strong>Data interviului:</strong>{" "}
+            {patientInfo.interviewDate || "—"}
+          </span>
+        </InfoRow>
+        <InfoRow>
+          <span>
+            <strong>Nume doctor:</strong> {patientInfo.doctorName || "—"}
+          </span>
+          <span>
+            <strong>Număr pacient:</strong> {patientInfo.patientNumber || "—"}
+          </span>
+        </InfoRow>
+      </PatientInfoBox>
       {/* ===================== */}
       {/*  Section 1 Symptoms   */}
       {/* ===================== */}
