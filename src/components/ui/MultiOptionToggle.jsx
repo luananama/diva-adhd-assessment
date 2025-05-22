@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import { useState } from "react";
+// import { useState } from "react";
 import styled from "styled-components";
 import StyledCheckbox from "./StyledCheckbox";
 
@@ -15,14 +15,12 @@ const OptionGroup = styled.div.withConfig({
 
 const MultiOptionToggle = ({
   options = [],
+  value = null, // new
   onSelect = () => {},
   inline = true,
 }) => {
-  const [selectedOption, setSelectedOption] = useState(null);
-
   const handleChange = (option) => {
-    const newSelected = selectedOption === option ? null : option;
-    setSelectedOption(newSelected);
+    const newSelected = value === option ? null : option;
     onSelect(newSelected);
   };
 
@@ -32,7 +30,7 @@ const MultiOptionToggle = ({
         <StyledCheckbox
           key={index}
           label={option}
-          checked={selectedOption === option}
+          checked={value === option}
           onChange={() => handleChange(option)}
         />
       ))}

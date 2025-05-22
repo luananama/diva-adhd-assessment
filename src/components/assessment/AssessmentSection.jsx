@@ -49,7 +49,8 @@ const AssessmentSection = () => {
 
   const prevSection = parseInt(sectionNumber) - 1;
   // #TODO go to instructions instead of start?
-  const backPath = prevSection >= 1 ? `/section/${prevSection}` : "/";
+  const backPath =
+    prevSection >= 1 ? `/section/${prevSection}` : "/patient-info";
   if (!currentSection) return <div>Section not found</div>;
 
   return (

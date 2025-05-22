@@ -208,12 +208,12 @@ const SummaryReport = () => {
           </span>
           <span>
             <strong>Data interviului:</strong>{" "}
-            {patientInfo.interviewDate || "—"}
+            {patientInfo.assessmentDate || "—"}
           </span>
         </InfoRow>
         <InfoRow>
           <span>
-            <strong>Nume doctor:</strong> {patientInfo.doctorName || "—"}
+            <strong>Nume cercetător:</strong> {patientInfo.assessorName || "—"}
           </span>
           <span>
             <strong>Număr pacient:</strong> {patientInfo.patientNumber || "—"}

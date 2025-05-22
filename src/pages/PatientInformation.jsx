@@ -35,6 +35,16 @@ const Input = styled.input`
   color: var(--color-gray-900);
 `;
 
+const DateInput = styled.input.attrs({ type: "date" })`
+  flex: 1;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: var(--color-gray-900);
+  padding: 10px;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 6px;
+`;
+
 const Disclaimer = styled.p`
   font-size: 0.9rem;
   color: var(--color-gray-600);
@@ -76,8 +86,7 @@ export default function PatientInformation() {
 
         <FormRow>
           <Label htmlFor="birthDate">Data nașterii</Label>
-          <Input
-            type="date"
+          <DateInput
             name="birthDate"
             value={answers.patientInfo?.birthDate || ""}
             onChange={handleChange}
@@ -88,14 +97,16 @@ export default function PatientInformation() {
           <Label htmlFor="sex">Sex:</Label>
           <MultiOptionToggle
             options={["Masculin", "Feminin"]}
-            onSelect={(value) => console.log("Selected:", value)}
+            value={answers.patientInfo?.gender || null}
+            onSelect={(val) =>
+              handleChange({ target: { name: "gender", value: val } })
+            }
           />
         </FormRow>
 
         <FormRow>
           <Label htmlFor="assessmentDate">Data interviului</Label>
-          <Input
-            type="date"
+          <DateInput
             name="assessmentDate"
             value={answers.patientInfo?.assessmentDate || ""}
             onChange={handleChange}
@@ -103,10 +114,10 @@ export default function PatientInformation() {
         </FormRow>
 
         <FormRow>
-          <Label htmlFor="doctorName">Nume cercetător</Label>
+          <Label htmlFor="assessorName">Nume cercetător</Label>
           <Input
-            name="doctorName"
-            value={answers.patientInfo?.doctorName || ""}
+            name="assessorName"
+            value={answers.patientInfo?.assessorName || ""}
             onChange={handleChange}
           />
         </FormRow>
