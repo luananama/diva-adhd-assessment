@@ -2,7 +2,7 @@
 import styled from "styled-components";
 import { useAssessment } from "../contexts/AssessmentContext";
 import { PageContainer, PageTitle } from "../components/ui/StyledTextElements";
-import MultiOptionToggle from "../components/ui/MultioptionToggle";
+import MultiOptionToggle from "../components/ui/MultiOptionToggle";
 import StyledButton, { ButtonContainer } from "../components/ui/StyledButton";
 
 const InfoCard = styled.div`
